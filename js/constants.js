@@ -17,6 +17,7 @@ const CURRENT_ITEM_CLASS = "current",
 
 const sliderSlideOptions = {
 	adaptiveHeight: true,
+	fade: true, 
 	arrows: false,
 	dots: false,
 	touchThreshold: 20,

@@ -116,7 +116,7 @@ function transitionContent( slider ) {
  * Custom function to get the slide the slider is set on at the moment
  */
 function getCurrentSlide( slider ) {
-	return slider.find( "li" ).eq( slider.slick( "slickCurrentSlide" ) + 1 );
+	return slider.find( "li" ).eq( slider.slick( "slickCurrentSlide" ) );
 }
 
 function toTargetWhenIsButton( clickTarget ) {
