@@ -22,7 +22,7 @@ const sliderSlideOptions = {
 	touchThreshold: 20,
 	autoplay: true,
 	autoplaySpeed: 6000,
-	infinite: false
+	infinite: true
 };
 
 
