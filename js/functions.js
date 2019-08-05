@@ -24,12 +24,10 @@ function close( section ) {
 }
 
 function openSlider( serviceGroup ) {
-//	serviceGroup.slick( "slickNext" );
 	serviceGroup.slick( "slickGoTo", 1 );
 }
 
 function closeSlider( serviceGroup ) {
-//	serviceGroup.slick( "slickPrev" );
 	serviceGroup.slick( "slickGoTo", 0 );
 }
 
@@ -52,13 +50,11 @@ function openSectionHandler( sectionToOpen ) {
 		let target = $( e.target );
 		if ( target.is( "header .button.open" ) ) {
 			if ( !sectionOpen ) {
-				// sectionHeaderFigure.animate( { "margin-top": -sectionHeaderHeight } );
 				section.animate( { "height": sectionHeight }, 500 );
 				section.addClass( "open" );
 				sectionHeaderButton.html( "По-малко" );
 				UIkit.scroll( sectionHeaderButton ).scrollTo( sectionMain );
 			} else {
-				// sectionHeaderFigure.animate( { "margin-top": 0 } );
 				section.removeClass( "open" );
 				section.animate( { "height": sectionHeaderHeight }, 500 );
 				sectionHeaderButton.html( "Повече" );
@@ -70,61 +66,10 @@ function openSectionHandler( sectionToOpen ) {
 	} );
 }
 
-/* function openSectionHandler( sectionToOpen ) {
-	let section = $( sectionToOpen ), 
-		sectionHeight = section.outerHeight(),
-		sectionHeader = section.find( "header" ),
-		sectionHeaderHeight = sectionHeader.outerHeight(),
-		sectionHeaderFigure = sectionHeader.find( "figure" ),
-		sectionMain = section.find( "main" ),
-		sectionMainHeight = sectionMain.outerHeight(),
-		sectionOpen = false;
-	section.height( sectionHeaderHeight );
-	section.on( "click", function( e ) {
-		let target = $( e.target );
-		if ( target.is( "header .button.open" ) ) {
-			section.animate( { "height": sectionHeight - sectionHeaderHeight }, 500 );
-			sectionHeader.animate( { "margin-top": -sectionHeaderHeight }, 500 );
-		} else if ( target.is( "main > .button.close" ) ) {
-			section.animate( { "height": sectionHeaderHeight }, 500 );
-			sectionHeader.animate( { "margin-top": 0 }, 500 );
-		}
-		
-	} );
-} */
-
-/* function openSectionHandler( sectionToOpen ) {
-	let section = $( sectionToOpen ), 
-		sectionHeader = section.find( "header" ),
-		sectionMain = section.find( "main" ),
-		sectionOpen = false;
-	sectionHeader.on( "click", function( e ) {
-		let target = $( e.target );
-		if ( target.is( ".button.open" ) ) {
-			if ( !sectionOpen ) {
-				UIkit.scroll( target ).scrollTo( sectionMain );
-				section.addClass( "open" );
-			} else {
-				UIkit.scroll( target ).scrollTo( sectionHeader );
-				section.removeClass( "open" );
-			}
-			sectionOpen = !sectionOpen;
-		}
-		
-	} );
-} */
-
 
 /*-----------------------------------------------------------------*/
 /*	Buttons
 /*-----------------------------------------------------------------*/
-
-/* function preventDefaultForButtons( e ) {
-	let target = $( e.target );
-	if ( target.is( ".button" ) ) {
-		e.preventDefault();
-	}
-} */
 
 function buttonsPreventDefault() {
 	$( document ).on( "click", function( e ) {
@@ -273,10 +218,6 @@ function attachUpdateFunctionallity( slider, randomAccess ) {
 		update( randomAccess, slider.slick( "slickCurrentSlide" ) );
 	} );
 }
-
-/* function getSlidePos( slider, slide ) {
-	return slider.find( "li" ).not( ".slick-cloned" ).index( slide );
-} */
 
 function update( randomAccess, currentSlidePos ) {
 	let buttonHolders = randomAccess.children(), 

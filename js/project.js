@@ -1,10 +1,3 @@
-/**
- * Initializing the contact info section functionallity
- */
-$( document ).ready( function() {
-	
-} );
-
 /*-----------------------------------------------------------------*/
 /*	Buttons
 /*-----------------------------------------------------------------*/
@@ -126,21 +119,6 @@ $( document ).ready( function() {
 		}
 		
 	} );
-	
-	// openSectionHandler( "#about" );
-	
-	/**
-	 * Initializing the about section slider functionallity
-	 */
-	/* attachSliderFunctionallityTo( about, aboutSlideOptions ); */
-	
-	/**
-	 * Listening for clicks on the about section and in case the open or close button was clicked,
-	 * the slickSlider goTo(index)-method is called and index=1 (open) or index=0 (close) is passed to it
-	 */
-	/* about.on( "click", function( e ) {
-		toggleWhenIsButton( e.target, about );
-	} ); */
 } );
 
 
@@ -151,154 +129,6 @@ $( document ).ready( function() {
 $( document ).ready( function() {
 	
 	toggleServiceDescription();
-	
-	// openSectionHandler( "#services" );
-	
-	/* function openSectionHandler( sectionToOpen ) {
-		let section = $( sectionToOpen ), 
-			sectionHeader = section.find( "header" ),
-			sectionMain = section.find( "main" ),
-			sectionOpen = false;
-		sectionHeader.on( "click", function( e ) {
-			let target = $( e.target );
-			if ( target.is( ".button.open" ) ) {
-				if ( !sectionOpen ) {
-					UIkit.scroll( target ).scrollTo( sectionMain );
-					section.addClass( "open" );
-				} else {
-					UIkit.scroll( target ).scrollTo( sectionHeader );
-					section.removeClass( "open" );
-				}
-				sectionOpen = !sectionOpen;
-			}
-			
-		} );
-	} */
-	
-	/* let services = $( "#services" ), 
-		serviceGroup = services.find( ".service-group" ).eq( 0 ),
-		serviceContent = serviceGroup.find( ".content" ),
-		servicesOpen = false;
-	serviceGroup.on( "click", function( e ) {
-		let target = $( e.target );
-		if ( target.is( "header .button.open" ) ) {
-			if ( !servicesOpen ) {
-				UIkit.scroll( target ).scrollTo( serviceContent );
-				serviceGroup.addClass( "open" );
-			} else {
-				UIkit.scroll( target ).scrollTo( serviceGroup );
-				serviceGroup.removeClass( "open" );
-			}
-			servicesOpen = !servicesOpen;
-		}
-		
-	} ); */
-	
-	/* let services = $( "#services" ),
-		header = services.find( "header" ).eq( 0 ),
-		headerFigure = header.find( "figure" ),
-		headerFigureHeight = headerFigure.outerHeight(),
-		headerTitle = header.find( "h3" ),
-		headerButton = header.find( ".button.open" ),
-		servicesHeight = services.outerHeight(),
-		headerHeight = services.find( "header" ).outerHeight(),
-		main = services.find( "main" ),
-		mainHeight = main.outerHeight(),
-		servicesOpen = false;
-		
-	// services.css( "height", headerHeight );
-	// services.css( "overflow", "hidden" );
-	main.css( "height", 0 );
-	main.css( "overflow", "hidden" );
-	services.on( "click", function( e ) {
-		let target = $( e.target ), 
-			headerButtonWidth = headerButton.outerWidth();
-		if ( target.is( "header .button.open" ) ) {
-			if ( !servicesOpen ) {
-				// services.css( "overflow", "visible" );
-				headerFigure.animate( { "margin-top": -headerFigureHeight }, 500 );
-				// services.animate( { "height": servicesHeight - 400 }, 500 );
-				main.animate( { "height": mainHeight }, 500 );
-				headerButton.html( "Вижте по-малко" );
-			} else {
-				// services.css( "overflow", "hidden" );	
-				headerFigure.animate( { "margin-top": 0 }, 500 );
-				// services.animate( { "height": headerHeight }, 500 );
-				main.animate( { "height": 0 }, 500 );
-				headerButton.html( "Вижте повече" );
-			}
-			servicesOpen = !servicesOpen;
-		}
-		
-	} ); */
-	
-	/* let serviceGroups = $( "#services .service-group" );
-	serviceGroups.slick( servicesContentOptions );
-	
-	serviceGroups.on( "click", function( e ) {
-		let target = $( e.target ), 
-			targetServiceGroup = $( this );
-			
-		if ( target.is( ".header .button.open" ) ) {
-			openSlider( targetServiceGroup );
-			targetServiceGroup.find( ".slick-list" ).css( "overflow", "visible" );
-		} else if ( target.is( ".main > .button.close" ) ) {
-			closeSlider( targetServiceGroup );
-		}
-		
-	} ); */
-	
-	/* serviceGroups.on( "afterChange", function( e, slick, currentSlide ) {
-		
-		let targetServiceGroup = $( this ), 
-			currentPos = targetServiceGroup.slick( "slickCurrentSlide" );
-			
-		if ( currentPos == 1 ) {
-			attachSelectHandler( targetServiceGroup );
-		} else if ( currentPos == 0 ) {
-			detachSelectHandler( targetServiceGroup );
-		}
-		
-	} ); */
-	
-	/* let services = $( "#services" );
-	services.on( "click", function( e ) {
-		let target = $( e.target ), 
-			targetServiceGroup = target.parents( ".service-group" );
-			
-		if ( target.is( ".button.open" ) ) {
-			openSlider( targetServiceGroup );
-			attachSelectHandler( targetServiceGroup );
-		} else if ( target.is( ".button.close" ) ) {
-			closeSlider( targetServiceGroup );
-			detachSelectHandler( targetServiceGroup );
-		}
-		
-	} ); */
-	
-} );
-
-/*-----------------------------------------------------------------*/
-/*	Showcase
-/*-----------------------------------------------------------------*/
-
-$( document ).ready( function() {
-	
-	/* let showcase = $( "#showcase .picture-array" );
-	UIkit.lightbox( showcase ); */
-	
-	$( ".picture a" ).touchTouch();
-	
-	let workpieces = $( ".workpiece" );
-	workpieces.on( "click", function( e ) {
-		let target = $( e.target ), 
-			targetWorkpiece = $( this );
-		if ( target.is( ".button.open" ) ) {
-			targetWorkpiece.addClass( "open" );
-		} else if ( target.is( ".button.close" ) ) {
-			targetWorkpiece.removeClass( "open" );
-		}
-	} );
 	
 } );
 
@@ -358,18 +188,6 @@ $( document ).ready( function() {
 	 * for revealing or hiding the button, depending on the page scroll position
 	 */
 	scrollToTopToggle( scrollToTopButton );
-	
-	/* let timer = null;
-	$( document ).on( "scroll", function() {
-		if ( timer !== null ) {
-			clearTimeout( timer );
-		}
-		timer = toggleBasedOn( window.pageYOffset, scrollToTopButton );
-	} ); */
-	
-	/* $( document ).on( "scroll", function() {
-		toggleBasedOn( window.pageYOffset, scrollToTopButton );
-	} ); */
 } );
 
 
