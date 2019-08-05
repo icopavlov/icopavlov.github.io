@@ -23,7 +23,7 @@ const sliderSlideOptions = {
 //	appendDots: $( "#slider .controls" ),
 //	dotsClass: "random-access",
 	touchThreshold: 20,
-//	autoplay: true,
+	autoplay: true,
 	autoplaySpeed: 6000,
 	infinite: false
 };
