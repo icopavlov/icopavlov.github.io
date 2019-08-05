@@ -1,0 +1,39 @@
+body {
+	color: rgba( 80, 80, 0, 1 );
+}
+
+/**
+ * Open and close buttons :after-s have different colors
+ */
+
+.button:after, 
+#slider .random-access button:before, #slider .random-access button:after {
+	background-color: rgba( 80, 80, 0, 1 );
+}
+
+/* .cover-image,
+#send-email form:after,
+.copyright-data {
+	background-color: red !important;
+}
+
+.cover-image {
+	background-image: none !important;
+} */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

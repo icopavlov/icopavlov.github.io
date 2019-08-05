@@ -1,0 +1,716 @@
+/*-----------------------------------------------------------------*/
+/*	LAYOUT
+/*-----------------------------------------------------------------*/
+
+/**
+ * Removes all helper headings
+ */
+header h6, 
+#slider h2, 
+#services h2, /* #services .service-group main h3, */
+#contact-info h2,
+#send-email h2, 
+#social-net-links h6 {
+	display: none;
+}
+
+/**
+ * Sets the vertical distance between sections
+ */
+#slider, 
+#about, 
+#services, 
+#send-email {
+	margin-bottom: 2.5rem;
+}
+
+/**
+ * Gives all non-edge-to-edge sections width (960px)
+ */
+#logo, #main-nav, #quick-contact, 
+#slider .controls, 
+/* #services .service-groups-array,  */
+#contact-info h3, #contact-info p, #contact-info .contact-info-items {
+	max-width: 960px;
+}
+
+/**
+ * Centers all non-edge-to-edge sections
+ */
+#logo, #main-nav, #quick-contact, 
+#slider .controls,
+#services .service-groups-array, 
+#contact-info h3, #contact-info p, #contact-info .contact-info-items, 
+#send-email, 
+footer, #social-net-links .nav {
+	margin-left: auto; margin-right: auto;
+}
+
+/**
+ * Gives section's heading, paragraph and button vertical distance
+ */
+#slider h3, #slider p,
+#about header h2, #about header p,
+.service-group header h3, .service-group header p, .service-group main h3, .service-group main p,
+#contact-info h3, #contact-info p {
+	margin-bottom: 2.5rem;
+	position: relative; z-index: 2;
+}
+
+/**
+ * Random-access navigation styling
+ */
+
+.random-access li {
+	float: left;
+}
+
+/**
+ * Resetting of predefined styles for slider automatically generated buttons
+ */
+.random-access button {
+	box-sizing: content-box;
+	display: block;
+	padding: 0;
+	border: 0;
+	position: relative;
+	background-color: transparent;
+	text-indent: -10000px;
+	cursor: pointer;
+}
+
+/**
+ * Creating two pseudo-elements:
+ * the "before" has the role to represent the button itself, 
+ * the "after" is used as an animated (on user interaction) border around the button
+ */
+.random-access button:before, .random-access button:after {
+	display: block;
+	width: 100%; height: 100%;
+	position: absolute; left: 0; top: 0;
+	border-radius: 50%;
+	content: "";
+	text-indent: 0;
+}
+
+/**
+ * Defining a transition over random access buttons on hover
+ */
+.random-access li button:after /*, .random-access .slick-active button:after, .random-access .current button:after */ {
+	transition: transform 0.2s;
+}
+
+/**
+ * Setting button border initial state: scaled down and not visible
+ */
+.random-access button:after, .random-access:hover li button:after,
+#slider .random-access button:after, #slider .random-access:hover li button:after {
+	transform: scale( 0.4 );
+	opacity: 0;
+}
+
+/**
+ * Setting button border hover state: fully visible and scaled up
+ */
+.random-access .slick-active button:after, .random-access .current button:after, .random-access:hover li:hover button:after,
+#slider .random-access .slick-active button:after, #slider .random-access .current button:after, #slider .random-access:hover li:hover button:after {
+	opacity: 1;
+}
+
+/**
+ * Buttons are reset to normal size (100%) on hover
+ */
+.random-access .slick-active button:after, .random-access .current button:after, .random-access:hover li:hover button:after {
+	transform: scale( 1 );
+}
+
+/**
+ * Slider buttons are reset to 85% of their original size on hover
+ */
+#slider .random-access .slick-active button:after, #slider .random-access .current button:after, #slider .random-access:hover li:hover button:after {
+	transform: scale( 0.75 );
+}
+
+
+/**
+ * COMMON BUTTON STYLES
+ */
+ 
+.button, #social-net-links .nav a {
+	display: inline-block;
+	position: relative; z-index: 2;
+	border: 1px solid; border-radius: calc( 40px / 2 );
+	overflow: hidden;
+}
+
+/**
+ * All buttons, except buttons for opening specific service info, have height 40px,
+ * line-height is equal to the height to center text content vertically
+ */
+#main-nav .button.open, 
+#slider .button.open, 
+#about .button.open, 
+#services header .button.open, #services .controls > .button.open, #services .content .button,
+.button.close, .button.scroll-to-top, 
+#social-net-links .nav a {
+	height: 40px; line-height: calc( 40px );
+}
+
+#quick-contact .header:after, 
+#main-nav .button.open, 
+#slider .button.open, 
+#about .button.open, 
+#services header .button.open, #services .controls > .button.open,
+.button.close, .button.scroll-to-top, 
+#social-net-links .nav a, 
+#contact-info .random-access button:after {
+	box-shadow: 0 0 2px rgba( 0, 0, 0, 0.25 );
+}
+
+.button.open {
+	padding-left: 20px; padding-right: 20px;
+}
+
+.button.close {
+	position: absolute;
+}
+
+.button.close, 
+#main-nav .button.open, 
+.button.scroll-to-top, 
+#social-net-links .nav a {
+	width: 40px;
+	overflow: hidden;
+}
+
+/**
+ * Close buttons have :before pseudo-element to hold the "x"-icon
+ */
+.button.close:before, 
+#main-nav .button.open:before, 
+.button.scroll-to-top:before, 
+#social-net-links .nav a:before {
+	width: 100%; height: 100%;
+	position: absolute; left: 0; top: 0; z-index: 2;
+}
+
+/**
+ * Open and close buttons :after-s have different colors
+ */
+ 
+.button.close:after, 
+.button.scroll-to-top:after {
+	z-index: 1;
+}
+
+/**
+ * Removes the outline, assigned to the random access button on click
+ */
+.random-access button:focus {
+	outline: none;
+}
+
+/**
+ * Styling #about and #services content
+ */
+
+/* #about article {
+	padding: 4rem 0;
+}
+
+#about article p {
+	margin-top: 1.2em;
+}
+
+main .button.close {
+	position: relative; margin-left: 50%; right: calc( 600px / 2 + 40px + 2px + 80px );
+}
+
+@media screen and ( max-width: 1000px ) {
+	
+	#about article, #services .content {
+		margin-top: 0;
+	}
+	
+	main .button.close {
+		margin-bottom: 2.5rem;
+		right: calc( 600px / 2 );
+	}
+	
+}
+
+@media screen and ( max-width: 640px ) {
+	
+	#about article, #services main .content, main .button.close {
+		margin-left: 1.25rem; margin-right: 1.25rem;
+	}
+	
+	main .button.close {
+		margin-right: 0; right: auto;
+	}
+
+} */
+
+/**
+ * Clears floats
+ */
+#main-nav:after, 
+#main-nav ul:after, 
+#quick-contact .quick-contact-items:after, 
+#services .content dl:after {
+	display: block;
+	clear: both;
+	content: "";
+}
+
+
+/*-----------------------------------------------------------------*/
+/*	TYPOGRAPHY
+/*-----------------------------------------------------------------*/
+
+/**
+ * Font declarations
+ */
+ 
+@font-face {
+	font-family: "Font Awesome";
+	src: url( "../fonts/FontAwesome.otf" );
+}
+
+@font-face {
+	font-family: "Font Awesome Brands";
+	src: url( "../fonts/fa-brands-400.ttf" );
+	
+}
+
+@font-face {
+	font-family: "Arial Black";
+	src: url( "../fonts/ariblk.ttf" );
+	
+}
+
+/**
+ * Sets base font family("Arial"), size(16px) and line-height(1.6)
+ */
+body {
+	font-size: 16px;
+	font-family: Arial;
+	line-height: 1.6;
+}
+
+
+/**
+ * Common button styles
+ */
+ 
+.button, #social-net-links .nav a {
+	font-weight: bold;
+	overflow: hidden;
+}
+
+.button.close, #main-nav .button.open, .button.scroll-to-top, #social-net-links .nav a {
+	text-indent: -10000px;
+}
+
+/**
+ * Close buttons have :before pseudo-element to hold the "x"-icon
+ */
+ 
+.button.close:before, #main-nav .button.open:before, .button.scroll-to-top:before, #social-net-links .nav a:before {
+	text-indent: 0;
+	text-align: center;
+}
+
+/**
+ * Close buttons, navigation open button and scroll to top button icons are Font Awesome characters
+ */
+.button.close:before, #main-nav .button.open:before, .button.scroll-to-top:before {
+	font-family: "Font Awesome";
+}
+
+.button.close:before {
+	content: "\f00d";
+}
+
+/**
+ * All buttons have :after pseudo-element to animate the hover state
+ */
+
+.button:after, #social-net-links .nav a:after {
+	content: "";
+}
+
+#slider h3,
+#about h2, #about h3,
+.service-group header h3, .service-group main h3, .service-group main h4,
+#contact-info h3 {
+	font-family: "Arial Black";
+	font-size: 1.8rem;
+	line-height: 1.2;
+}
+
+#slider h3 {
+	font-size: 2.0rem;
+}
+
+
+/*-----------------------------------------------------------------*/
+/*	COLOR
+/*-----------------------------------------------------------------*/
+
+body {
+	color: rgba( 255, 255, 255, 1 );
+}
+
+#slider .button.open, 
+#main-nav .button.open, 
+#services header .button.open {
+	border-color: rgba( 255, 255, 255, 0.75 );
+}
+ 
+.button.close, 
+#about .button.open, 
+#services .controls > .button.open,
+.button.scroll-to-top, 
+#social-net-links .nav a {
+	border-color: rgba( 80, 80, 0, 0.75 );
+}
+
+/**
+ * Close buttons
+ */
+ 
+.button.close:before, 
+.button.scroll-to-top:before, 
+#social-net-links .nav a:before {
+	color: inherit;
+}
+
+
+/**
+ * Open and close buttons :after-s have different colors
+ */
+ 
+.button.open:after {
+	background-color: rgba( 255, 255, 255, 1 );
+}
+
+.button.close:after, 
+#about .button.open:after, 
+#services main .button.open:after, 
+.button.scroll-to-top:after, 
+#social-net-links .nav a:after,
+#slider .random-access button:before, #slider .random-access button:after {
+	background-color: rgba( 80, 80, 0, 0.9 );
+}
+
+
+/**
+ * Open- and close-buttons have different text color when entering the hover state
+ */
+ 
+.button.open:hover {
+	color: rgba( 0, 0, 0, 0.75 );
+}
+
+.button.close:hover, 
+#about .button.open:hover, 
+#services main .button.open:hover, 
+.button.scroll-to-top:hover, 
+#social-net-links .nav a:hover {
+	color: rgba( 255, 255, 255, 1 );
+}
+
+/* #slider,
+#services header {
+	color: rgba( 255, 255, 255, 1 );
+}
+
+#services main {
+	color: rgba( 80, 80, 0, 0.75 );
+} */
+
+
+/*-----------------------------------------------------------------*/
+/*	IMAGERY
+/*-----------------------------------------------------------------*/
+
+/** 
+ * Defining images color overlay
+ */
+/* #slider .content li.slick-slide:before,
+#about figure:before,
+#services header figure:before, #services figure:before,
+#contact-info:before {
+	display: block;
+	width: 100%; height: 100%;
+	position: absolute; left: 0; top: 0;
+	background-color: rgba( 255, 255, 0, 0.4 );
+	content: "";
+} */
+
+.cover-image:before {
+	display: block;
+	width: 100%; height: 100%;
+	position: absolute; left: 0; top: 0;
+	background-color: rgba( 255, 255, 0, 0.4 );
+	content: "";
+}
+
+.cover-image {
+	display: block;
+	width: 100%; height: 100%;
+	position: absolute; left: 0; top: 0;
+	background: center center / cover no-repeat;
+	
+}
+
+.cover-image img {
+	display: none;
+}
+
+
+/*-----------------------------------------------------------------*/
+/*	USER INTERACTIONS
+/*-----------------------------------------------------------------*/
+
+:active, :focus, :empty {
+	outline: none;
+}
+
+/**
+ * All buttons have :after pseudo-element to animate the hover state
+ */
+
+.button:after, 
+#social-net-links .nav a:after {
+	display: block;
+	width: 120%; padding-top: 120%;
+	position: absolute; left: 50%; top: 50%; margin-left: -60%; margin-top: -60%;
+	z-index: -1;
+	border-radius: 60%;
+	transform: scale( 0 );
+	transition-property: transform;
+	transition-duration: 0.25s;
+}
+
+
+/**
+ * Hover state changes in button style
+ */
+ 
+.button:hover:after, 
+#social-net-links .nav a:hover:after {
+	transform: scale( 1 );
+}
+
+.button:hover {
+	text-shadow: 0 0 1px rgba( 0, 0, 0, 0.25 );
+}
+
+#slider .button.open:hover, 
+#main-nav .button.open:hover, 
+#about .button.open:hover, 
+#services header .button.open:hover, #services .controls > .button.open:hover, 
+.button.close:hover, .button.scroll-to-top:hover {
+	box-shadow: 0 0 10px rgba( 0, 0, 0, 0.25 );
+}
+
+
+/*-----------------------------------------------------------------*/
+/*	EFFECTS
+/*-----------------------------------------------------------------*/
+
+body > header, 
+#slider .content, 
+#services .service-group header,
+#contact-info, #contact-info .random-access button {
+	text-shadow: 0 0 1px rgba( 0, 0, 0, 0.85 );
+}
+
+#quick-contact .header:after, 
+#slider .button.open, 
+#about .button.open, 
+#services header .button.open, 
+#social-net-links .nav a, 
+#contact-info .random-access button:after,
+.button.close, 
+.button.scroll-to-top  {
+	box-shadow: 0 0 2px rgba( 0, 0, 0, 0.25 );
+}
+
+
+/*-----------------------------------------------------------------*/
+/*	MEDIA QUERIES
+/*-----------------------------------------------------------------*/
+
+@media screen and ( max-width: 1000px ) {
+	
+	#logo, #quick-contact,
+	#slider .content h4, #slider .content h3, #slider .content p, #slider .content .button.open,
+	#about header h2, #about header p, #about header .button.open, 
+	#contact-info h3, #contact-info p, #contact-info .contact-info-items {
+		margin-left: 1.25rem; margin-right: 20%;
+	}
+	
+	#quick-contact,
+	#contact-info h3, #contact-info p, #contact-info .contact-info-items {
+		margin-right: 1.25rem;
+	}
+	
+/*	
+	#slider .content h4, #slider .content h3, #slider .content p, #slider .content .button.open {
+		margin-left: 1.25rem; margin-right: 1.25rem;
+	}
+	
+	#about header h2, #about header p, #about header a {
+		margin-left: 1.25rem;
+	}
+*/
+}
+
+@media screen and ( max-width: 840px ) {
+	
+	#logo, 
+	#slider .content h4, #slider .content h3, #slider .content p, #slider .content .button.open,
+	#about header h2, #about header p, #about header .button.open {
+		margin-right: 10%;
+	}
+	
+}
+
+@media screen and ( max-width: 640px ) {
+	
+	#logo, #quick-contact,
+	#slider .content h4, #slider .content h3, #slider .content p, #slider .content .button.open,
+	#about header h2, #about header p, #about header .button.open, 
+	#contact-info h3, #contact-info p, #contact-info .contact-info-items {
+		margin-right: 1.25rem;
+	}
+	
+	body {
+		line-height: 1.4;
+	}
+
+	/* Gives heading, paragraph and button smaller font size */
+	#slider h3,
+	#about h2,
+	.service-group header h3, .service-group main h4,
+	#contact-info h3 {
+		font-size: 1.6rem;
+	}
+	
+	#contact-info dd {
+		font-size: 1.45rem;
+	}
+
+	/* Decreases heading, paragraph and button vertical distance */
+	#slider h3, #slider p,
+	#about header h2, #about header p,
+/*	#services .service-group header h3, #services .service-group header p, */
+	#contact-info h3, #contact-info p {
+		margin-bottom: 2rem;
+	}
+	
+	#slider .content li {
+		padding-top: calc( 20px + 50px + 6.8rem ); padding-bottom: 3.4rem;
+	}
+
+	/* #services header .button.open {
+		width: 100%; height: 100%;
+		margin-left: 0;
+		position: absolute; left: 0; top: 0; z-index: 2;
+		border: none;
+		text-indent: -10000px;
+		// transform: none;
+	}
+	
+	#services header .button.open, #services header .button.open:hover {
+		box-shadow: unset;
+	}
+
+	#services header .button.open:after {
+		display: none;
+	}
+
+	.service-group header .button.open, .service-group header h3, .service-group header p,
+	.service-group:hover header .button.open, .service-group:hover header h3, .service-group:hover header p {
+		transform: none;
+	} */
+	
+}
+
+@media screen and ( max-width: 520px ) {
+	
+	/* Decreases heading, paragraph and button vertical distance */
+	#slider h3, #slider p,
+	#about header h2, #about header p,
+	.service-group header h3, .service-group header p,
+	#contact-info h3, #contact-info p {
+		margin-bottom: 1.6rem;
+	}
+	
+	#slider .content li {
+		padding-top: calc( 20px + 50px + 6rem ); padding-bottom: 3rem;
+	}
+	
+	#slider h3,
+	#about h2,
+	.service-group header h3, .service-group main h4,
+	#contact-info h3 {
+		font-size: 1.4rem;
+	}
+	
+	#contact-info dd {
+		font-size: 1.25rem;
+	}
+	
+}
+
+@media screen and ( max-width: 420px ) {
+	
+	#slider h3,
+	#about h2,
+	.service-group header h3, .service-group main h4,
+	#contact-info h3 {
+		font-size: 1.25rem;
+	}
+	
+	#contact-info dd {
+		font-size: 1.1rem;
+	}
+	
+}
+
+@media screen and ( max-width: 320px ) {
+	
+	#slider h3,
+	#about h2,
+	.service-group header h3, .service-group main h4,
+	#contact-info h3 {
+	//	font-size: 1.2rem;
+	}
+	
+	#slider h4 {
+		font-size: 0.85rem;
+	}
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

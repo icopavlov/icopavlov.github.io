@@ -1,0 +1,71 @@
+/**
+ * Font declarations
+ */
+ 
+@font-face {
+	font-family: "Font Awesome";
+	src: url( "../../fonts/FontAwesome.otf" );
+}
+
+@font-face {
+	font-family: "Font Awesome Brands";
+	src: url( "../../fonts/fa-brands-400.ttf" );
+	
+}
+
+@font-face {
+	font-family: "Arial Black";
+	src: url( "../../fonts/ariblk.ttf" );
+	
+}
+
+/**
+ * Sets base font family("Arial"), size(16px) and line-height(1.6)
+ */
+body {
+	font-size: 16px;
+	font-family: Arial;
+	line-height: 1.6;
+	color: rgba( 80, 80, 0, 1 );
+}
+
+.title, .sup-title, .sub-title {
+	font-family: "Arial Black";
+}
+
+.title {
+	font-size: 1.5rem;
+	line-height: 1.2;
+}
+
+/* #slider h3,
+.header h2, .header h3, .main h3, .main h4,
+#contact-info h3 {
+	font-family: "Arial Black";
+	font-size: 1.8rem;
+	line-height: 1.2;
+} */
+
+
+
+
+/* .header h2, .header h3, .main h3 {
+	font-family: "Arial Black";
+	font-size: 1.5rem;
+} */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

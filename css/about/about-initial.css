@@ -1,0 +1,168 @@
+/*-----------------------------------------------------------------*/
+/*	LAYOUT
+/*-----------------------------------------------------------------*/
+
+#about {
+	max-width: none;
+}
+
+/* #about, #about .header, #about .title, #about .description, #about .button.open, #about .main, #about article p {
+	position: relative;
+} */
+
+#about .header, #about .main {
+	padding: 4rem 0;
+}
+
+#about .header .title, #about .header .description, #about .header .button.open {
+	margin-left: calc( 50% + 2.5rem ); margin-right: 1.25rem;
+	position: relative; z-index: 4;
+}
+
+#about article p {
+	margin-top: 1.2rem;
+}
+
+/**
+ * Laying out about- and services-close buttons
+ */
+
+/*
+#about article {
+	max-width: 40rem;
+	margin-left: auto; margin-right: auto;
+}
+*/
+
+
+
+/*-----------------------------------------------------------------*/
+/*	TYPOGRAPHY
+/*-----------------------------------------------------------------*/
+
+#about .header:before {
+	content: "";
+}
+
+#about article {
+	text-align: justify;
+}
+
+#about figcaption {
+	text-align: left;
+}
+
+
+/*-----------------------------------------------------------------*/
+/*	COLOR
+/*-----------------------------------------------------------------*/
+
+/* #about {
+	color: rgba( 0, 0, 0, 0.75 );
+} */
+
+/* #about .header:before {
+	background-color: rgba( 255, 255, 0, 0.25 );
+}
+
+#about .main .button.close {
+	color: inherit;
+}
+
+#about .main .button.close:hover {
+	color: rgba( 255, 255, 255, 1 );
+} */
+
+
+/*-----------------------------------------------------------------*/
+/*	IMAGERY
+/*-----------------------------------------------------------------*/
+
+#about .header figure {
+	display: block;
+	height: 100%;
+	position: absolute; left: 0; top: 0;
+}
+
+#about .header figure {
+	width: 50%;
+}
+
+#about .header figure {
+	z-index: 1;
+	background: center / cover no-repeat;
+}
+
+#about .header:before {
+	z-index: 2;
+}
+
+#about figure {
+	position: relative;
+}
+
+/* #about article img {
+	box-sizing: border-box;
+	display: block;
+	padding: 10px;
+	width: 100%; height: auto;
+	margin-top: 1em;
+}
+
+#about figcaption {
+	margin-top: 4px;
+	padding: 16px; padding-top: 0;
+	position: relative;
+	font-family: "Arial Black"; font-size: 0.85rem; line-height: 1.4; color: rgba( 0, 0, 0, 0.7 ); 
+} */
+
+/*
+#about figure:after {
+	display: block;
+	width: 100%; height: 100%;
+	position: absolute; left: 0; top: 0; z-index: 1;
+	background-color: rgba( 255, 255, 0, 0.25 );
+	content: "";
+}
+*/
+
+
+/*-----------------------------------------------------------------*/
+/*	USER INTERACTIONS
+/*-----------------------------------------------------------------*/
+
+
+/*-----------------------------------------------------------------*/
+/*	EFFECTS
+/*-----------------------------------------------------------------*/
+
+
+/*-----------------------------------------------------------------*/
+/*	MEDIA QUERIES
+/*-----------------------------------------------------------------*/
+
+@media screen and ( max-width: 1000px ) {
+	
+	#about .header .title, #about .header .description, #about .header .button.open {
+		margin-left: 1.25rem;
+	}
+	
+	#about .header figure {
+		width: 100%;
+	}
+
+}
+	
+
+
+
+
+
+
+
+
+
+
+
+
+

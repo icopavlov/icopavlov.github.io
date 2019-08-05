@@ -1,0 +1,38 @@
+#quick-contact .header:after, 
+#slider .button.open, 
+#about .button.open, 
+#services .header .button.open, 
+#social-net-links .nav a, 
+#contact-info .random-access button:after,
+.button.close, 
+.button.scroll-to-top  {
+	box-shadow: 0 0 2px rgba( 0, 0, 0, 0.25 );
+}
+
+#logo, #quick-contact, #main-nav .button.open,
+#slider .content, 
+#about .header,
+#services .header, 
+#contact-info, #contact-info .random-access button {
+	text-shadow: 0 0 1px rgba( 255, 255, 255, 1 );
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

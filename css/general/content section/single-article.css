@@ -1,0 +1,163 @@
+/*-----------------------------------------------------------------*/
+/*	LAYOUT
+/*-----------------------------------------------------------------*/
+
+/**
+ * Single article section header
+ */
+
+.header {
+	padding-top: 4rem; padding-bottom: 4rem;
+}
+
+/* .section-title {
+	display: none;
+	
+} */
+
+.header .title, .header .description, .header .button.open {
+	margin-left: 4rem; margin-right: 25%;
+}
+
+/**
+ * Single article section main
+ */
+
+.main {
+	padding-top: 2rem; padding-bottom: 2.5rem;
+	position: relative;
+}
+
+/* .main > * {
+	margin-left: 0; margin-right: 0;
+} */
+
+/* .main .button.close, .main .title {
+	margin-bottom: 1.25rem;
+} */
+
+.button.close, 
+.main .title {
+	margin-bottom: 1.25rem;
+}
+
+.main .description {
+	margin-bottom: 0.5rem;
+}
+
+.main > .button.close {
+	position: relative;
+}
+
+.content .sub-title {
+	margin-top: 0.75rem;
+	margin-bottom: 0.4rem;
+}
+
+/* .content p {
+	margin-top: 0.4rem;
+	margin-bottom: 0;
+} */
+
+.main .content > p {
+//	margin-bottom: 4rem;
+	
+}
+
+/* .main .title, .main > p {
+	margin-right: 20%;
+} */
+
+/* .main > p {
+	margin-bottom: 0.25rem;
+} */
+
+
+
+/*-----------------------------------------------------------------*/
+/*	TYPOGRAPHY
+/*-----------------------------------------------------------------*/
+
+.main {
+	line-height: 1.4;
+}
+
+/* .title, .sup-title, .sub-title {
+	font-family: "Arial Black";
+}
+
+.title {
+	font-size: 1.5rem;
+	line-height: 1.2;
+}
+
+.content > .sup-title {
+	
+}
+
+#slider .content-title {
+//	font-size: 2.0rem;
+} */
+
+
+
+/*-----------------------------------------------------------------*/
+/*	COLOR
+/*-----------------------------------------------------------------*/
+
+
+
+/*-----------------------------------------------------------------*/
+/*	IMAGERY
+/*-----------------------------------------------------------------*/
+
+
+
+/*-----------------------------------------------------------------*/
+/*	EFFECTS
+/*-----------------------------------------------------------------*/
+
+
+
+/*-----------------------------------------------------------------*/
+/*	USER INTERACTIONS
+/*-----------------------------------------------------------------*/
+
+
+
+/*-----------------------------------------------------------------*/
+/*	KEYFRAMES
+/*-----------------------------------------------------------------*/
+
+
+
+/*-----------------------------------------------------------------*/
+/*	MEDIA QUERIES
+/*-----------------------------------------------------------------*/
+
+/* @media screen and ( max-width: 960px ) {
+	
+	.header .title, .header .description, .header .button.open {
+		margin-left: 1.25rem; margin-right: 10%;
+	}
+	
+} */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

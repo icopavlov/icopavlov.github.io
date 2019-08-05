@@ -1,0 +1,180 @@
+/*-----------------------------------------------------------------*/
+/*	LAYOUT
+/*-----------------------------------------------------------------*/
+
+#services .service-group, #services main {
+	position: relative; z-index: 1;
+	overflow: hidden;
+}
+
+#services .service-group.open header, #services .service-group main {
+	height: 0; overflow: hidden;
+}
+
+#services .service-group header, #services .service-group.open main {
+	height: auto;
+}
+
+#services .service-group.open {
+	z-index: 5;
+}
+
+#services .service-group:not( :last-child ) {
+	margin-bottom: 2px;
+}
+
+/** 
+ * Header and main sections are given 100% width and placed next to each other
+ * to make only one of them visible at a time
+ */
+#services header, #services main {
+	box-sizing: border-box;
+	float: left;
+	width: 100%;
+}
+
+#services main {
+	margin-right: -100%;
+}
+
+#services header {
+	position: relative;
+//	margin-left: -100%;
+}
+
+#services .service-group:after {
+	display: block;
+	clear: both;
+	content: "";
+}
+
+
+/*-----------------------------------------------------------------*/
+/*	TYPOGRAPHY
+/*-----------------------------------------------------------------*/
+
+
+/*-----------------------------------------------------------------*/
+/*	COLOR
+/*-----------------------------------------------------------------*/
+
+
+/*-----------------------------------------------------------------*/
+/*	IMAGERY
+/*-----------------------------------------------------------------*/
+
+.service-group header {
+	background: center / cover no-repeat;
+}
+
+
+/*-----------------------------------------------------------------*/
+/*	USER INTERACTIONS
+/*-----------------------------------------------------------------*/
+
+/** 
+ * Clicking the "open" button on the service group shows detailed info about the services enclosed
+ * by placing the header section out of view and the main section - into view
+ */
+#services header {
+	transition: margin-left 0.25s;
+}
+
+#services .service-group.open header {
+	margin-left: -100%;
+}
+
+/** 
+ * Placing mouse cursor over service group header moves the heading, the paragraph and the button up
+ */
+.service-group header .button.open, .service-group header h3, .service-group header p {
+	transition-property: transform; transition-duration: 0.25s;
+}
+
+.service-group header .button.open, .service-group header h3, .service-group header p {
+	transform: translateY( 40px );
+}
+
+.service-group header .button.open {
+	transform: translateY( 120px );
+	opacity: 0;
+	transition-property: transform, opacity; // transition-duration: 0.25s;
+}
+
+.service-group:hover header .button.open, .service-group:hover header h3, .service-group:hover header p {
+	transform: translateY( 0 );
+}
+
+.service-group:hover header .button.open {
+	opacity: 1;
+}
+
+
+/*-----------------------------------------------------------------*/
+/*	EFFECTS
+/*-----------------------------------------------------------------*/
+
+
+/*-----------------------------------------------------------------*/
+/*	MEDIA QUERIES
+/*-----------------------------------------------------------------*/
+
+@media screen and ( min-width: 841px ) {
+	
+	/* In odd service groups moves the right edges of header headings and paragraphs to left */
+	.service-group:nth-child( 2n + 1 ) header h3, .service-group:nth-child( 2n + 1 ) header p, .service-group:nth-child( 2n + 1 ) header .button.open {
+		margin-left: 8%; margin-right: 35%;
+	}
+
+	/* In even service groups moves the left edges of header headings and paragraphs to right */
+	.service-group:nth-child( 2n ) header h3, .service-group:nth-child( 2n ) header p, .service-group:nth-child( 2n ) header .button.open {
+		margin-left: 35%; margin-right: 8%;
+	}
+	
+	#services .service-group header {
+		padding: 12% 0;
+	}
+	
+}
+
+@media screen and ( max-width: 840px ) {
+	
+	#services .service-group header {
+		padding: 5% 0;
+	}
+	
+	/* In odd service groups moves the right edges of header headings and paragraphs to left */
+	.service-group:nth-child( n ) header h3, .service-group:nth-child( n ) header p, .service-group:nth-child( n ) header .button.open {
+		margin-left: 1.25rem; margin-right: 20%;
+	}
+	
+	#services .service-group header h3, #services .service-group header p, #services .service-group main h4, #services .service-group main p {
+		margin-bottom: 1.25rem;
+	}
+
+}
+
+@media screen and ( max-width: 720px ) {
+	
+	/* In odd service groups moves the right edges of header headings and paragraphs to left */
+	.service-group:nth-child( n ) header h3, .service-group:nth-child( n ) header p, .service-group:nth-child( n ) header .button.open {
+		margin-right: 1.25rem;
+	}
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,123 @@
+/*-----------------------------------------------------------------*/
+/*	LAYOUT
+/*-----------------------------------------------------------------*/
+
+#quick-contact {
+	position: relative;
+}
+
+/* Quick contact is positioned on top of the header */
+#quick-contact .quick-contact-items {
+	position: absolute;
+	right: 20px; top: 12px;
+}
+
+/* Aligning quick contact icons and content horizontally */
+#quick-contact .entry, #quick-contact .label, #quick-contact .value {
+	float: left;
+	height: 42px; line-height: 42px;
+}
+
+#quick-contact .label {
+	width: 1.8em;
+	position: relative;
+	margin-right: 4px;
+}
+
+/* Quick contact icon boxes */
+#quick-contact .entry .label:before {
+	display: inline-block;
+	width: 1em; height: 1em; line-height: 1em;
+	padding: 0.4em;
+	position: absolute; left: 0; top: 50%; transform: translateY( -50% );
+	box-shadow: unset;
+}
+
+#quick-contact .value {
+	margin-right: 8px;
+}
+
+
+/*-----------------------------------------------------------------*/
+/*	TYPOGRAPHY
+/*-----------------------------------------------------------------*/
+
+#quick-contact .label {
+	text-indent: -10000px;
+}
+
+#quick-contact .label:before {
+	font-family: "Font Awesome"; font-size: 0.9rem;
+	text-indent: 0; text-align: center;
+}
+
+#quick-contact .phone .label:before {
+	content: "\f095";
+	font-size: 100%;
+}
+
+#quick-contact .email .label:before {
+	content: "\f0e0";
+}
+
+
+/*-----------------------------------------------------------------*/
+/*	COLOR
+/*-----------------------------------------------------------------*/
+
+
+/*-----------------------------------------------------------------*/
+/*	IMAGERY
+/*-----------------------------------------------------------------*/
+
+
+/*-----------------------------------------------------------------*/
+/*	USER INTERACTIONS
+/*-----------------------------------------------------------------*/
+
+
+/*-----------------------------------------------------------------*/
+/*	EFFECTS
+/*-----------------------------------------------------------------*/
+
+
+/*-----------------------------------------------------------------*/
+/*	MEDIA QUERIES
+/*-----------------------------------------------------------------*/
+
+/** 
+ * Width breakpoints: 780px | 620px
+ */
+
+@media screen and ( max-width: 780px ) {
+	
+	#quick-contact .quick-contact-items {
+		bottom: calc( 100% + 10px );
+	}
+	
+}
+
+@media screen and ( max-width: 420px ) {
+	
+	/* Quick contact is positioned at the center */
+	/* #quick-contact .email {
+		display: none;
+	} */
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

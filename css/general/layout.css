@@ -1,0 +1,152 @@
+/**
+ * Removes all helper headings
+ */
+header h6, 
+/* #slider h2, 
+#services h2,
+#contact-info h2,
+#send-email h2,  */
+.section-title,
+#social-net-links h6 {
+	display: none;
+}
+
+/**
+ * Sets the vertical distance between sections
+ */
+/* #slider, 
+#about, 
+#services, 
+#send-email {
+	margin-bottom: 2.5rem;
+} */
+
+/**
+ * Gives all non-edge-to-edge sections width (960px) and centers them
+ */
+header .logo, #main-nav, #quick-contact, 
+#slider .controls, 
+#about, 
+#services,
+/* #contact-info .title, #contact-info .description, */ /* #contact-info .info, */ #contact-info .contact-info-items,
+#send-email, 
+#social-net-links .nav {
+	max-width: 960px; margin-left: auto; margin-right: auto;
+}
+
+/**
+ * Centers all non-edge-to-edge sections
+ */
+/* #logo, #main-nav, #quick-contact, 
+#slider .controls,
+#services .service-groups-array, 
+#contact-info h3, #contact-info p, #contact-info .info, #contact-info .contact-info-items,
+#send-email, 
+footer, #social-net-links .nav {
+	margin-left: auto; margin-right: auto;
+} */
+
+/**
+ * Gives section's heading, paragraph and button vertical distance
+ */
+/* #slider h3, #slider h4, #slider p,
+.header h2, .header p,
+.header h3, .main h3, .main p,
+#contact-info h3, #contact-info p {
+	margin-bottom: 2rem;
+} */
+
+.title, 
+.description {
+	margin-bottom: 2rem;
+}
+
+/* .main .description {
+	margin-bottom: 1rem;
+} */
+
+/* #slider .button.open {
+	margin-top: 2rem;
+} */
+
+/**
+ * Clears floats
+ */
+#main-nav:after, 
+#main-nav ul:after, 
+#quick-contact .quick-contact-items:after, 
+#services .content dl:after {
+	display: block;
+	clear: both;
+	content: "";
+}
+
+/* #about, #services {
+	max-width: 960px;
+	margin-left: auto; margin-right: auto;
+} */
+
+
+/**
+ * Sets the vertical distance between sections
+ */
+/* #slider, 
+#about, 
+#services {
+	margin-bottom: 8px;
+} */
+
+/* .section {
+	margin-bottom: 2.5rem;
+} */
+
+.section {
+	margin-bottom: 8px;
+}
+
+#send-email {
+	margin-bottom: 2.5rem;
+}
+
+#contact-info {
+	margin-bottom: -5rem;
+}
+
+body > header {
+	width: 100%;
+	margin-top: 4rem;
+	position: absolute; z-index: 4;
+}
+
+/** 
+ * Given that the header and the main navigation are positioned over the slider, 
+ * it's necessary to push slider content down, to free up space for the nav.
+ * For that purpose, top padding is applied to slider content.
+ * Top padding of slider content is equal to {header's top margin} + {header's height} + {slider content's bottom padding}
+ */
+#slider .slide {
+	padding-top: calc( 4rem + 3.2rem + 7rem ); padding-bottom: 7rem;
+}
+
+.button.close {
+	position: absolute;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

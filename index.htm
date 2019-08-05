@@ -1,9 +1,240 @@
 <!DOCTYPE html>
 
-<html lang="en">
-<head></head>
+<html lang="bg">
+<head>
+	<title>Уеб дизайн и фронт енд</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Ръчно изработен сайт с модерна визия, пълна използваемост както на компютър, така и на мобилни устройства">
+</head>
 <body>
-<h2>Ico Pavlov</h2>
-<p>Design, code, copy</p>
+
+<header>
+	<h1 class="logo"><a href="#slider">handcraftedwebdesign</a></h1>
+	<nav id="main-nav">
+		<h6>Отидете на:</h6>
+		<ul class="nav">
+			<li><a href="#about">За мен</a></li>
+			<li><a href="#live-templates">Мои сайтове</a></li>
+			<li><a href="#contact-info">Контакти</a></li>
+		</ul>
+		<a class="button open" href="#">Отворете/затворете навигацията</a>
+	</nav>
+	<a class="button scroll-to-top" href="#slider">Отидете горе</a>
+	<section id="quick-contact">
+		<h6>Намерете ме на:</h6>
+		<section class="quick-contact-items">
+			<dl class="entry phone">
+				<dt class="label">Телефон:</dt>
+				<dd class="value"></dd>
+			</dl>
+			<dl class="entry email">
+				<dt class="label">Имейл:</dt>
+				<dd class="value">xpavlov@abv.bg</dd>
+			</dl>
+		</section>
+	</section>
+</header>
+
+<main>
+	<section id="slider" class="section">
+		<h2 class="section-title">За мен накратко</h2>
+		
+		<ol class="content">
+			<li class="slide about">
+				<h5 class="sup-title">Стремя се към</h5>
+				<h3 class="title">Впечатляващо потребителско изживяване и дизайн</h3>
+				<p class="description"></p>
+				<a class="button open" data-target-selector="#live-templates" href="#">Разгледайте</a>	
+				<figure class="cover-image" style="background-image: url( ./images/slider/ )">
+					<img src="images/slider/handcraftedwebdesign.png" alt="">
+				</figure>
+			</li>
+			<li class="slide about">
+				<h5 class="sup-title">Подплатени с</h5>
+				<h3 class="title">Бърз и качествен код</h3>
+				<p class="description"></p>
+				<a class="button open" data-target-selector="#live-templates" href="#">Разгледайте</a>	
+				<figure class="cover-image" style="background-image: url( ./images/slider/ )">
+					<img src="images/slider/mains.jpg" alt="">
+				</figure>
+			</li>
+		</ol>
+	</section>
+	
+	<section id="about" class="section">
+		<h2 class="section-title">Няколко думи за мен</h2>
+	
+		<section class="body">
+			<section class="header">
+				<h3 class="title">Няколко думи за мен</h3>
+				<p class="description">Здравейте, казвам се Христо и както вече сте се досетили, се занимавам с уеб-дизайн - създаване на интерфейси и потребителско изживяване за уеб.</p>
+				<a class="button open" href="#">Прочетете повече</a>
+				<figure class="cover-image" style="background-image: url( ./images/about/laptop-header.jpg )">
+					<img src="images/about/laptop-header.jpg" alt="">
+				</figure>
+			</section>
+		
+			<section class="main">
+				<a class="button close" href="#">Затворете</a>
+				
+				<article class="content">
+					<h3 class="title">Няколко думи за мен</h3>
+					
+					<p>Завършил съм Машиностроене в Техническия университет-София (ТУ), след това съм изучавал малко Информационни технологии, пак в ТУ. Ползата от втората ми специалност беше, че в една от лекциите на един от курсовете се разглеждаха HTML, CSS, JavaScript - почти всичко, влизащо в областта "front end" в една лекция :) !</p>
+					
+					<p>Уеб-дизайнът е процесът по цялостното създаване на един уеб-сайт - от първоначалната идея, през дизайна, съдържанието, различните начини за неговото представяне в уеб и взаимодействието с потребителя, до завършения и работещ код.</p>
+					
+					<p>От самото начало на впускането ми в тази област преди няколко години, идеята ми за уеб-дизайн винаги е била постигането на една органична комбинация между подредено и удобно съдържание, и впечатляваща визия, разширена с приятна, ненатрапчива интерактивност.</p>
+					
+					<p>Специализирам в изработването на малки статични сайтове, с мои дизайни, пиша ги почти от нулата, което означава, че в кода няма нищо излишно.</p>
+				</article>
+			</section>
+		</section>
+	</section>
+	
+	<section id="live-templates" class="section">
+		<h2 class="section-title">Разгледайте някои мои проекти</h2>
+	
+		<section class="body">
+			<h3 class="title">Разгледайте някои мои проекти</h3>
+			<ul class="workpieces-array">
+				<li class="workpiece">
+					<a class="button open link" href="">
+						<figure class="cover-image" style="background-image: url( ./images/live-templates/naistyle-narrow-01.png )">
+							<img src="images/live-templates/naistyle-narrow-01.png" alt="">
+						</figure>
+					</a>
+				</li>
+				
+				<li class="workpiece">
+					<a class="button open link" href="">
+						<figure class="cover-image" style="background-image: url( ./images/live-templates/sky-city-template.png )">
+							<img src="images/live-templates/sky-city-template.png" alt="">
+						</figure>
+					</a>
+				</li>
+				
+				<li class="workpiece">
+					<a class="button open link" href="">
+						<figure class="cover-image" style="background-image: url( ./images/live-templates/titanium-template.png )">
+							<img src="images/live-templates/titanium-template.png" alt="">
+						</figure>
+					</a>
+				</li>
+			</ul>
+		</section>
+	</section>
+	
+	<section id="contact-info" class="section">
+		<h2 class="section-title">За контакти:</h2>
+	
+		<section class="controls">
+			<ol class="random-access">
+				<li class="email"><button></button></li>
+			</ol>
+		</section>
+	
+		<ol class="contact-info-items content">
+			<li class="slide email">
+				<h3 class="title">Електронна поща</h3>
+				<p class="description">Ако имате каквито и да било въпроси към мен, свързани с работата ми, задайте ги на</p>
+				
+				<section class="info">
+					<dl class="values">
+						<dt class="label">имейл</dt>
+						<dd class="value">xpavlov@abv.bg</dd>
+					</dl>
+				</section>
+			</li>
+		</ol>
+		
+		<figure class="cover-image" style="background-image: url( ./images/contact-info/contact1600x900.jpg )">
+			<img src="images/contact-info/contact1600x900.jpg" alt="">
+		</figure>
+	</section>
+	
+	<section id="send-email" class="section">
+		<h2 class="section-title">За мнения, въпроси и препоръки:</h2>
+	
+		<section class="body">
+			<form class="gform" action="https://script.google.com/macros/s/AKfycbxDSr8ZONRiQU53KF78RbsN4t-WIl9iONi2pa0R/exec" method="post">
+				<dl class="name">
+					<dt><label>Вашето име:</label></dt>
+					<dd>
+						<input type="text" name="name">
+					</dd>
+				</dl>
+				<dl class="email">
+					<dt><label>Вашият имейл:</label></dt>
+					<dd>
+						<input type="text" name="email">
+					</dd>
+				</dl>
+				<dl class="message">
+					<dt><label>Вашето съобщение:</label></dt>
+					<dd>
+						<textarea name="message"></textarea>
+					</dd>
+				</dl>
+				<dl class="send">
+					<dt><label>Кликнете, за да изпратите:</label></dt>
+					<dd>
+						<input type="submit" value="Изпрати">
+					</dd>
+				</dl>
+			</form>
+		</section>
+	</section>
+</main>
+<footer>
+	<h2 class="logo"><a href="#slider">Ицо Павлов</a></h2>
+	<p class="copyright-data">2019 © Всички права запазени.</p>
+	
+	<section id="social-net-links">
+		<h6>В социалните мрежи:</h6>
+		<ul class="nav">
+			<li class="facebook"><a class="button link" href="https://www.facebook.com/Ицо-Павлов-уеб-дизайн-2122802414685117/?view_public_for=2122802414685117">Facebook</a></li>
+		</ul>
+	</section>
+</footer>
+
+<!-- Website stylesheets, uncommonly placed at the bottom to speed up page rendering -->
+<link href="plugins/slick-1.6.0/slick/slick.css" rel="stylesheet">	
+<link href="css/style.css" type="text/css" rel="stylesheet">
+
+<!-- jQuery -->
+<script src="js/libraries/jquery-3.2.0.min.js" type="text/javascript"></script>
+
+<!-- slickSlider, providing slider functionality for the slider, about, services and contact info sections -->
+<script src= "plugins/slick-1.6.0/slick/slick.min.js" type= "text/javascript"></script>
+<!-- UIkit, providing smooth scrolling functionallity -->
+<script src= "plugins/uikit-3.0.0-rc.10/js/uikit.min.js" type= "text/javascript"></script>
+<!-- Project scripts -->
+<script src= "js/constants.js" type= "text/javascript"></script>
+<script src= "js/functions.js" type= "text/javascript"></script>
+<script src= "js/project.js" type= "text/javascript"></script>
+<!-- Form script -->
+<script src= "js/form-submission-handler.js" data-cfasync= "false" type= "text/javascript"></script>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,54 @@
+/* :root {
+	--column-count: 2;
+	--column-gap: 0.25rem;
+	
+}
+
+.pictures-array:after {
+	display: block;
+	clear: both;
+	content: "";
+}
+
+.picture {
+	float: left;
+	width: calc( ( 100% - ( var( --column-count ) - 1 ) * var( --column-gap ) ) / var( --column-count ) ); height: 2rem;
+	margin-right: var( --column-gap ); margin-top: var( --column-gap );
+	position: relative;
+	background-color: red;
+	
+}
+
+.picture:nth-child( 2n + 2 ) {
+	margin-right: 0;
+}
+
+.picture:nth-child( -n + 2 ) {
+	margin-top: 0;
+}
+
+.picture a {
+	width: 100%; height: 100%;
+	position: absolute; left: 0; top: 0;
+	
+} */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

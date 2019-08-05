@@ -1,0 +1,25 @@
+/** 
+ * On new slide loading the text lines and the button
+ * enter into view sequentially upwards
+ */
+
+#slider .sup-title, #slider .title, #slider .description, #slider .button.open {
+	transform: translateY( 100px );
+	opacity: 0;
+}
+
+#slider .slide.current .sup-title, #slider .slide.current .title, #slider .slide.current .description, #slider .slide.current .button.open {
+	animation-name: slide-up, fade-in; animation-duration: 0.25s; animation-timing-function: ease-out; animation-fill-mode: forwards;
+}
+
+#slider .slide.current .sup-title, #slider .slide.current .title {
+	animation-delay: 0s;
+}
+
+#slider .slide.current .description {
+	animation-delay: 0.2s;
+}
+
+#slider .slide.current .button.open {
+	animation-delay: 0.4s;
+}

@@ -1,0 +1,117 @@
+/*-----------------------------------------------------------------*/
+/*	LAYOUT
+/*-----------------------------------------------------------------*/
+
+/**
+ * Random-access navigation styling
+ */
+.random-access li {
+	float: left;
+}
+
+/* Clearing floats */
+.random-access:after {
+	display: block;
+	content: "";
+	clear: both;
+}
+
+/**
+ * Resetting of predefined styles for slider automatically generated buttons
+ */
+.random-access button {
+	box-sizing: content-box;
+	display: block;
+	padding: 0;
+	border: 0;
+	position: relative;
+	background-color: transparent;
+	text-indent: -10000px;
+	cursor: pointer;
+}
+
+/**
+ * Removes the outline, assigned to the random access button on click
+ */
+.random-access button:focus {
+	outline: none;
+}
+
+
+/*-----------------------------------------------------------------*/
+/*	TYPOGRAPHY
+/*-----------------------------------------------------------------*/
+
+
+/*-----------------------------------------------------------------*/
+/*	COLOR
+/*-----------------------------------------------------------------*/
+
+
+/*-----------------------------------------------------------------*/
+/*	IMAGERY
+/*-----------------------------------------------------------------*/
+
+
+/*-----------------------------------------------------------------*/
+/*	USER INTERACTIONS
+/*-----------------------------------------------------------------*/
+
+/**
+ * Creating two pseudo-elements:
+ * the "before" has the role to represent the button itself, 
+ * the "after" is used as an animated (on user interaction) border around the button
+ */
+.random-access button:before, .random-access button:after {
+	display: block;
+	width: 100%; height: 100%;
+	position: absolute; left: 0; top: 0;
+	border-radius: 50%;
+	content: "";
+	text-indent: 0;
+}
+
+/**
+ * Defining a transition over random access buttons on hover
+ */
+.random-access li button:after {
+	transition: transform 0.2s;
+}
+
+/**
+ * Setting button border initial state: scaled down and not visible
+ */
+.random-access button:after, .random-access:hover li button:after {
+	transform: scale( 0.45 );
+	opacity: 0;
+}
+
+/**
+ * Setting button border hover state: fully visible and scaled up. Buttons are reset to normal size (100%) on hover
+ */
+.random-access .current button:after, .random-access:hover li:hover button:after {
+	opacity: 1;
+	transform: scale( 1 );
+}
+
+
+/*-----------------------------------------------------------------*/
+/*	MEDIA QUERIES
+/*-----------------------------------------------------------------*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

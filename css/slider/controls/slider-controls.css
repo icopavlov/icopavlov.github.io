@@ -1,0 +1,77 @@
+/*-----------------------------------------------------------------*/
+/*	LAYOUT
+/*-----------------------------------------------------------------*/
+
+#slider .controls {
+	display: flex; justify-content: center;
+	margin-top: 5px;
+}
+
+/**
+ * Slider random-access navigation
+ */
+#slider .random-access button {
+	width: 1rem; height: 1rem;
+//	border: 0.075rem solid transparent;
+}
+
+#slider .random-access button:after {
+	box-sizing: border-box;
+	padding: 5%;
+	background-clip: content-box;
+}
+
+
+/*-----------------------------------------------------------------*/
+/*	TYPOGRAPHY
+/*-----------------------------------------------------------------*/
+
+
+/*-----------------------------------------------------------------*/
+/*	COLOR
+/*-----------------------------------------------------------------*/
+
+
+/*-----------------------------------------------------------------*/
+/*	IMAGERY
+/*-----------------------------------------------------------------*/
+
+
+/*-----------------------------------------------------------------*/
+/*	USER INTERACTIONS
+/*-----------------------------------------------------------------*/
+
+/* Represents the button */
+#slider .random-access button:before {
+	transform: scale( 0.35 );
+}
+
+#slider .random-access button:before, #slider .random-access:hover .slick-active button:before, #slider .random-access:hover .current button:before {
+	opacity: 1;
+}
+
+#slider .random-access .slick-active button:before, #slider .random-access .current button:before, #slider .random-access:hover li:hover button:before, #slider .random-access li.slick-active:hover button:before {
+	opacity: 0;
+}
+
+
+/*-----------------------------------------------------------------*/
+/*	MEDIA QUERIES
+/*-----------------------------------------------------------------*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,114 @@
+/*-----------------------------------------------------------------*/
+/*	LAYOUT
+/*-----------------------------------------------------------------*/
+
+/* #slider {
+	position: relative;
+	border-bottom-style: solid;
+} */
+
+
+/** 
+ * Given that the main navigation is positioned over the slider, it's necessary to push slider content down, 
+ * to free up space for the nav. For that purpose, top padding is applied to slider content.
+ * Top padding of slider content is equal to {header's top margin} + {header's height} + {slider content's bottom padding}
+ */
+/* #slider .slide {
+//	position: relative;
+	padding-top: calc( 70px + 50px + 110px ); padding-bottom: 110px;
+//	overflow: hidden;
+} */
+
+#slider .sup-title {
+	margin-bottom: 0.7rem;
+}
+
+/** 
+ * Slides go from the left browser edge to the right one, but their content has distance from those edges,
+ * left and right margins are applied to each slide content
+ */
+
+#slider .sup-title, #slider .title, #slider .description, #slider .button.open {
+	margin-left: calc( ( 100% - 960px ) / 2 ); margin-right: calc( ( 100% - 960px ) / 2 );
+}
+
+#slider .sup-title, #slider .title, #slider .description {
+	padding-right: calc( 25 / 100 * 960px );
+}
+
+
+/*-----------------------------------------------------------------*/
+/*	TYPOGRAPHY
+/*-----------------------------------------------------------------*/
+
+#slider .title {
+	font-size: 1.8rem;
+}
+
+
+/*-----------------------------------------------------------------*/
+/*	COLOR
+/*-----------------------------------------------------------------*/
+
+
+
+/*-----------------------------------------------------------------*/
+/*	IMAGERY
+/*-----------------------------------------------------------------*/
+
+
+
+/*-----------------------------------------------------------------*/
+/*	USER INTERACTIONS
+/*-----------------------------------------------------------------*/
+
+
+
+/*-----------------------------------------------------------------*/
+/*	KEYFRAMES
+/*-----------------------------------------------------------------*/
+
+
+/*
+/*-----------------------------------------------------------------*/
+/*	MEDIA QUERIES
+/*-----------------------------------------------------------------*/
+
+@media screen and ( max-width: 1000px ) {
+	
+	/* #slider .sup-title, #slider .title, #slider .description, #slider .button.open {
+		margin-right: 20%;
+	} */
+	
+	#slider .sup-title, #slider .title, #slider .description {
+		padding-right: 0;
+	}
+	
+}
+
+@media screen and ( max-width: 480px ) {
+	
+	#slider .slide {
+		padding-top: calc( 20px + 50px + 5em ); padding-bottom: 2.5em;
+	}
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

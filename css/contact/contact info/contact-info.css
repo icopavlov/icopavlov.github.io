@@ -1,0 +1,225 @@
+/*-----------------------------------------------------------------*/
+/*	LAYOUT
+/*-----------------------------------------------------------------*/
+
+#contact-info {
+	padding-top: 3.5rem; padding-bottom: 7.5rem;
+/* 	position: relative; z-index: 1;
+	overflow: hidden; */
+}
+
+/* Gives the contact info controls and the list with the info the same padding */
+/* #contact-info .title, #contact-info .description, #contact-info .info, */ #contact-info .contact-info-items, #contact-info .controls {
+	box-sizing: border-box;
+	padding-right: calc( 40 / 100 * 960px );
+}
+
+/* .contact-info-items .sup-title, .contact-info-items .title, .contact-info-items .description, .contact-info-items .button.open {
+	margin-left: auto; margin-right: auto;
+} */
+
+/* #contact-info .contact-info-items {
+	z-index: 2;
+} */
+
+/* .contact-info-items .slide {
+	padding-top: 3.5rem; padding-bottom: 7.5rem;
+} */
+
+.contact-info-items .values {
+	float: left;
+	padding: 0.75em; padding-top: 0.25em;
+	border: 1px solid rgba( 80, 80, 0, 0.4 );
+}
+
+.contact-info-items .values:not( :last-of-type ) {
+	margin-right: 0.5em; margin-bottom: 0.5em;
+}
+
+.contact-info-items .info:after {
+	display: block;
+	clear: both;
+	content: "";
+}
+
+/* #contact-info .title, #contact-info .description  {
+	margin-left: 0;
+} */
+
+#contact-info .controls {
+//	box-sizing: border-box;
+	height: 100%;
+	position: absolute; z-index: 3; 
+	top: 0; right: calc( ( 100% - 960px ) / 2 );
+}
+
+#contact-info .random-access {
+	position: absolute; 
+	left: 50%; top: 50%; transform: translate( -50%, -50% );
+}
+
+/* #contact-info figure {
+	width: 100%; height: 100%;
+	position: absolute; left: 0; top: 0;
+} */
+
+/* #contact-info:before {
+	display: block;
+	width: 100%; height: 100%;
+	position: absolute; top: 0; left: 0; z-index: 1;
+} */
+
+
+/*-----------------------------------------------------------------*/
+/*	TYPOGRAPHY
+/*-----------------------------------------------------------------*/
+
+@font-face {
+	font-family: "Font Awesome";
+	src: url( "../fonts/FontAwesome.otf" );
+}
+
+/* #contact-info:before {
+	content: "";
+} */
+
+.contact-info-items .info {
+	line-height: 1;
+}
+
+.contact-info-items .label {
+	font-size: 0.8rem;
+	line-height: 1.2;
+	text-transform: lowercase;
+}
+
+/* .contact-info-items .label {
+	line-height: 1.2;
+	text-transform: lowercase;
+} */
+
+.contact-info-items .value {
+	font-family: "Arial Black";
+	font-size: 1.4rem;
+}
+
+
+/*-----------------------------------------------------------------*/
+/*	COLOR
+/*-----------------------------------------------------------------*/
+
+#contact-info {
+//	color: rgba( 255, 255, 255, 1 );
+}
+
+#contact-info .contact-info-items, #contact-info .controls {
+//	border-color: transparent;
+}
+
+/* .contact-info-items .label {
+	color: rgba( 255, 255, 255, 1 );
+} */
+
+/* .contact-info-items .value {
+	background-color: rgba( 255, 255, 255, 1 );
+	color: rgba( 80, 80, 0, 1 );
+} */
+
+
+/*-----------------------------------------------------------------*/
+/*	IMAGERY
+/*-----------------------------------------------------------------*/
+
+/* #contact-info figure {
+	background: center / cover no-repeat;
+} */
+
+
+/*-----------------------------------------------------------------*/
+/*	USER INTERACTIONS
+/*-----------------------------------------------------------------*/
+
+
+/*-----------------------------------------------------------------*/
+/*	MEDIA QUERIES
+/*-----------------------------------------------------------------*/
+
+@media screen and ( max-width: 1000px ) {
+	
+	/* #contact-info .title, #contact-info .description, #contact-info .info, */ #contact-info .contact-info-items, #contact-info .controls {
+		padding-right: calc( 40 / 100 * 100% ); padding-right: calc( 40 / 100 * ( 100% - 2 * 1.25rem ) );
+	}
+	
+	/* #contact-info .controls {
+		padding-right: calc( 40 / 100 * ( 100% - 2 * 1.25rem ) );
+	} */
+	
+	#contact-info .controls {
+		right: 1.25rem;
+	}
+	
+}
+
+@media screen and ( max-width: 800px ) {
+	
+	#contact-info .controls {
+		box-sizing: content-box;
+		display: inline-block;
+	//	height: auto;
+		margin-left: 1.25rem; margin-bottom: 1.25rem;
+		position: relative; right: auto;
+	//	background-color: red;
+	}
+	
+	#contact-info .random-access {
+		position: initial; transform: none;
+	}
+	
+	/* #contact-info .title, #contact-info .description, */ /* #contact-info .info, */ #contact-info .contact-info-items, #contact-info .controls {
+		padding-right: 0;
+	}
+	
+	#contact-info .title {
+	//	margin-top: 2.5rem;
+	//	background-color: blue;
+	}
+	
+}
+
+@media screen and ( max-width: 480px ) {
+	
+	.contact-info-items .value {
+		float: none;
+		display: inline-block;
+	}
+	
+	.contact-info-items .value:not( :last-of-type ) {
+		margin-right: 0.2em;
+	}
+
+	.contact-info-items .label:nth-of-type( n + 2 ) {
+		top: 0; margin-bottom: 0;
+	}
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

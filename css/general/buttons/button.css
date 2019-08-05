@@ -1,0 +1,110 @@
+/*-----------------------------------------------------------------*/
+/*	LAYOUT
+/*-----------------------------------------------------------------*/
+ 
+.button {
+	display: inline-block;
+	position: relative; z-index: 2;
+	border: 1px solid; border-radius: calc( 40px / 2 );
+	overflow: hidden;
+}
+
+/**
+ * All buttons, except buttons for opening specific service info, have height 40px,
+ * line-height is equal to the height to center text content vertically
+ */
+.button {
+	height: 40px; line-height: calc( 40px );
+}
+
+.button.open {
+	padding-left: 20px; padding-right: 20px;
+}
+
+
+/*-----------------------------------------------------------------*/
+/*	TYPOGRAPHY
+/*-----------------------------------------------------------------*/
+
+.button {
+	font-weight: bold;
+}
+
+/**
+ * All buttons have :after pseudo-element to animate the hover state
+ */
+
+.button:after {
+	content: "";
+}
+
+
+/*-----------------------------------------------------------------*/
+/*	COLOR
+/*-----------------------------------------------------------------*/
+
+
+/*-----------------------------------------------------------------*/
+/*	IMAGERY
+/*-----------------------------------------------------------------*/
+
+
+/*-----------------------------------------------------------------*/
+/*	USER INTERACTIONS
+/*-----------------------------------------------------------------*/
+
+/**
+ * All buttons have :after pseudo-element to animate the hover state
+ */
+
+.button:after {
+	display: block;
+	width: 120%; padding-top: 120%;
+	position: absolute; left: 50%; top: 50%; margin-left: -60%; margin-top: -60%;
+	z-index: -1;
+	border-radius: 60%;
+//	border-color: rgba( 80, 80, 0, 1 );
+	background-color: rgba( 80, 80, 0, 1 );
+	transform: scale( 0 );
+	transition-property: transform; transition-duration: 0.25s;
+}
+
+
+/**
+ * Hover state changes in button style
+ */
+ 
+.button:hover:after {
+	transform: scale( 1 );
+}
+
+.button:hover {
+	border-color: rgba( 80, 80, 0, 1 );
+	color: rgba( 255, 255, 255, 1 );
+	text-shadow: 0 0 1px rgba( 0, 0, 0, 0.25 );
+	box-shadow: 0 0 10px rgba( 0, 0, 0, 0.25 );
+}
+
+
+/*
+/*-----------------------------------------------------------------*/
+/*	MEDIA QUERIES
+/*-----------------------------------------------------------------*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

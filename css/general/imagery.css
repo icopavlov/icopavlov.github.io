@@ -1,0 +1,50 @@
+/** 
+ * Since cover image is essentially a background and 
+ * is absolutely positioned within its holder section,
+ * the section is positioned
+ */
+#slider li.slick-slide,
+.header, 
+#services,
+#contact-info {
+	position: relative;
+}
+
+/** 
+ * Defining images color overlay
+ */
+
+.cover-image, .cover-image:before {
+	display: block;
+	width: 100%; height: 100%;
+	position: absolute; left: 0; top: 0;
+}
+
+.cover-image {
+	z-index: -1;
+	background: center center / cover no-repeat;
+}
+
+.cover-image img {
+	display: none;
+}
+
+.cover-image:before {
+	background-color: rgba( 255, 255, 0, 0.4 );
+	content: "";
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

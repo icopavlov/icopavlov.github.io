@@ -1,0 +1,42 @@
+/** 
+ * On new slide loading the text lines and the button
+ * enter into view sequentially upwards
+ */
+
+#slider .sup-title, #slider .title, #slider .description, #slider .button.open {
+	opacity: 0;
+}
+
+#slider .slide.current .sup-title, #slider .slide.current .title, #slider .slide.current .description, #slider .slide.current .button.open, #slider .slide.current .cover-image {
+	animation-name: fade-in-pop; animation-duration: 0.4s; // animation-timing-function: ease-out; animation-fill-mode: forwards;
+}
+
+#slider .slide.current .cover-image {
+	animation-name: pop; animation-delay: 0;
+}
+
+#slider .slide.current .sup-title, #slider .slide.current .title {
+	animation-delay: 0.35s;
+}
+
+#slider .slide.current .description {
+	animation-delay: 0.7s;
+}
+
+#slider .slide.current .button.open {
+	animation-delay: 1.05s;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

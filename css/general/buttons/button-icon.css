@@ -1,0 +1,115 @@
+/*-----------------------------------------------------------------*/
+/*	LAYOUT
+/*-----------------------------------------------------------------*/
+
+.button.close, 
+#main-nav .button.open, 
+.button.scroll-to-top {
+	width: 40px;
+}
+
+/**
+ * Close buttons have :before pseudo-element to hold the "x"-icon
+ */
+.button:before {
+	display: block;
+	width: 100%; height: 100%;
+	position: absolute; left: 0; top: 0; z-index: 2;
+}
+
+
+/*-----------------------------------------------------------------*/
+/*	TYPOGRAPHY
+/*-----------------------------------------------------------------*/
+
+.button.close, 
+#main-nav .button.open, 
+.button.scroll-to-top, 
+#social-net-links .button {
+	text-indent: -10000px;
+}
+
+/**
+ * Close buttons have :before pseudo-element to hold the "x"-icon
+ */
+ 
+.button:before {
+	text-indent: 0;
+	text-align: center;
+}
+
+/**
+ * Close buttons, navigation open button and scroll to top button icons are Font Awesome characters
+ */
+.button:before {
+	font-family: "Font Awesome";
+}
+
+/* Close button icon */
+.button.close:before {
+	content: "\f00d";
+}
+
+/* Scroll-to-top button icon */
+.button.scroll-to-top:before {
+	content: "\f062";
+}
+
+/* Toggle nav button icon */
+#main-nav .button.open:before {
+	content: "\f0c9";
+}
+
+/* Social net links buttons icons */
+#social-net-links .button:before {
+	font-family: "Font Awesome Brands";
+}
+
+#social-net-links .facebook .button:before {
+	content: "\f39e";
+}
+
+#social-net-links .twitter .button:before {
+	content: "\f099";
+}
+
+#social-net-links .you-tube .button:before {
+	content: "\f167";
+}
+
+
+/*-----------------------------------------------------------------*/
+/*	COLOR
+/*-----------------------------------------------------------------*/
+
+
+/*-----------------------------------------------------------------*/
+/*	IMAGERY
+/*-----------------------------------------------------------------*/
+
+
+/*-----------------------------------------------------------------*/
+/*	USER INTERACTIONS
+/*-----------------------------------------------------------------*/
+
+/*
+/*-----------------------------------------------------------------*/
+/*	MEDIA QUERIES
+/*-----------------------------------------------------------------*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

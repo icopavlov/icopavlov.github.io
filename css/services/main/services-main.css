@@ -1,0 +1,344 @@
+/*-----------------------------------------------------------------*/
+/*	LAYOUT
+/*-----------------------------------------------------------------*/
+
+#services .main {
+	padding-bottom: 3.25rem;
+}
+
+.services-array {
+	margin-top: 1.25rem;
+	
+}
+
+.services-array:after {
+	display: block;
+	clear: both;
+	content: "";
+}
+
+
+/* Service
+/*----------------------------------------------------------------*/
+
+/* #services .services-array {
+	margin-top: 1rem;
+} */
+
+#services .content > p {
+	
+}
+
+.service {
+	box-sizing: border-box;
+	float: left;
+	width: calc( ( 100% - 1 * 8px ) / 2 ); margin-right: 8px; margin-top: 8px;
+	padding: 2.5rem 0;
+	position: relative;
+	overflow: hidden;
+}
+
+.service:nth-of-type( 2n + 2 ) {
+	margin-right: 0;
+}
+
+/* Service content
+/*----------------------------------------------------------------*/
+
+/* .service-group .main h4, .service-group .main h4:before, .service-group .main p {
+	margin-bottom: 0.5rem;
+} */
+
+.service-title, .service-title:before {
+	margin-bottom: 0.75rem;
+}
+
+.service-title {
+	margin-left: 1rem; margin-right: 1rem;
+	position: relative; z-index: 2;
+}
+
+.service-title:before {
+	display: block; display: none;
+	width: 40px; height: 40px; line-height: 40px;
+	margin-left: auto; margin-right: auto;
+	border: 1px solid; border-radius: 20px;
+}
+
+/* Service info
+/*----------------------------------------------------------------*/
+
+.service-info {
+	box-sizing: border-box;
+	width: 80%;
+	padding: 40px;
+	position: absolute; left: 10%; top: 55%; z-index: 3;
+//	box-shadow: 0 0 25px rgba( 0, 0, 0, 0.75 );
+}
+
+.service-info .service-title {
+	display: none;
+}
+
+.service-info p {
+	margin-top: 0.4rem; margin-bottom: 0;
+}
+
+.service-info .button.close {
+	margin: 0;
+	position: absolute; 
+	left: 100%; margin-left: -20px; bottom: 100%; margin-bottom: -20px;
+}
+	
+
+/* #services .main li .button.open {
+	height: 40px; line-height: 40px;
+} */
+
+.service:after {
+	box-sizing: border-box;
+	display: block;
+	width: 100%; height: 100%;
+	position: absolute; left: 0; top: 0; z-index: 1;
+}
+
+
+/* #services .main:after {
+	display: block;
+	clear: both;
+	content: "";
+} */
+
+
+/*-----------------------------------------------------------------*/
+/*	TYPOGRAPHY
+/*-----------------------------------------------------------------*/
+
+.service, .service-title {
+	text-align: center;
+}
+
+.service-title, .service-info .service-title, .service p {
+	font-size: 0.85rem; line-height: 1.4;
+}
+
+.service-title, .service-info .service-title /* , #services main .main dd */ {
+	font-family: "Arial Black";
+}
+
+.service-title:before {
+	font-size: 1.2rem;
+	font-family: "Font Awesome";
+	content: "\f00c";
+}
+
+.service article {
+	text-align: left;
+}
+
+.service:after {
+	content: "";
+}
+
+/* #services .main dl {
+	line-height: 1;
+}
+
+#services main .main dd {
+	font-size: 1.5rem;
+}
+
+#services .main dd:nth-of-type( 1 ) {
+	font-size: 4rem;
+} */
+
+
+/*-----------------------------------------------------------------*/
+/*	COLOR
+/*-----------------------------------------------------------------*/
+
+#services main {
+	background-color: rgba( 80, 80, 0, 1 );
+}
+
+#services .main, #services .controls {
+	border-color: transparent;
+}
+
+.service article {
+	background-color: rgba( 80, 80, 0, 1 );
+	color: rgba( 255, 255, 255, 1 );
+}
+
+.service:after {
+	background-color: rgba( 255, 255, 0, 0.45 );
+}
+
+
+/*-----------------------------------------------------------------*/
+/*	IMAGERY
+/*-----------------------------------------------------------------*/
+
+/* #services li.service-group:nth-child( n ) header {
+	background: center center / cover no-repeat;
+} */
+
+
+/*-----------------------------------------------------------------*/
+/*	USER INTERACTIONS
+/*-----------------------------------------------------------------*/
+
+.service.current {
+	overflow: visible;
+}
+
+
+/* Article appears when open button is clicked
+/*----------------------------------------------------------------*/
+
+.service article {
+	visibility: hidden;
+	transform: translateY( 40px );
+	opacity: 0;
+}
+
+.service.current article {
+	visibility: visible;
+	animation-name: fade-in, translate-up; animation-duration: 0.25s; animation-delay: 0.2s; animation-fill-mode: forwards;
+}
+	
+
+/* Button close
+/*----------------------------------------------------------------*/
+
+.service-info .button.close {
+	background-color: rgba( 80, 80, 0, 1 );
+	border-color: rgba( 255, 255, 255, 1 );
+}
+
+.service-info .button.close:after {
+	background-color: rgba( 255, 255, 255, 1 );
+}
+
+.service-info .button.close:hover {
+	color: rgba( 80, 80, 0, 1 );
+}
+
+	
+/* Service holder is brought over the rest when hovered or current
+/*----------------------------------------------------------------*/
+
+.service {
+	z-index: 1;
+}
+
+.service:hover, .service.current {
+	z-index: 2;
+}
+
+.service.current {
+	z-index: 3;
+	overflow: visible;
+}
+	
+
+/* Button open
+/*----------------------------------------------------------------*/
+
+.service .button.open {
+	border-color: rgba( 80, 80, 0, 0.9 );
+	color: rgba( 80, 80, 0, 1 );
+}
+
+.service .button.open:hover, .service.current .button.open {
+	color: rgba( 255, 255, 255, 1 );
+	text-shadow: unset;
+}
+
+.service .button.open:hover:after, .service.current .button.open:after {
+	visibility: visible;
+	transform: scale( 1 );
+}
+
+
+/*-----------------------------------------------------------------*/
+/*	KEYFRAMES
+/*-----------------------------------------------------------------*/
+
+@keyframes fade-in {
+	
+	0% {
+		opacity: 0;
+	}
+	
+	100% {
+		opacity: 1;
+	}
+	
+}
+
+@keyframes translate-up {
+	
+	0% {
+		transform: translateY( 40px );
+	}
+	
+	100% {
+		transform: translateY( 0 );
+	}
+	
+}
+
+
+/*-----------------------------------------------------------------*/
+/*	EFFECTS
+/*-----------------------------------------------------------------*/
+
+#services .service-title,
+#services .service .button.open {
+	opacity: 0.75;
+}
+
+#services .service-info {
+	box-shadow: 0 0 25px rgba( 0, 0, 0, 0.75 );
+}
+
+
+/*-----------------------------------------------------------------*/
+/*	MEDIA QUERIES
+/*-----------------------------------------------------------------*/
+
+@media screen and ( max-width: 920px ) {
+	
+	/* #services .main {
+		margin-left: -1.25rem; margin-right: -1.25rem;
+	} */
+	
+}
+
+@media screen and ( max-width: 840px ) {
+	
+	.service:nth-child( n ) {
+		float: none;
+		width: auto;
+		margin-right: 0;
+	}
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

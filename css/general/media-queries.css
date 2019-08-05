@@ -1,0 +1,264 @@
+@media screen and ( max-width: 1000px ) {
+	
+	/* #logo, #quick-contact,
+	#slider .content h4, #slider .content h3, #slider .content p, #slider .content .button.open,
+	#about header h2, #about header p, #about header .button.open,
+	#services header h3, #services header p, #services header .button.open,
+	#contact-info h3, #contact-info p, #contact-info .info {
+		margin-left: 1.25rem; margin-right: 20%;
+	} */
+	
+	header .logo, #quick-contact,
+	.title, .sup-title, .description, .button.open,
+	#slider .sup-title, #slider .title, #slider .description, #slider .button.open,
+	.button.close,
+	/* .header .title, .header .description, .header .button.open, */
+	#contact-info .info {
+		margin-left: 1.25rem; margin-right: 20%;
+	}
+	
+	#about .main .description {
+		margin-left: 0;
+	}
+	
+	/* #quick-contact,
+	#about header h2, #about header p, #about header .button.open,
+	#services header h3, #services header p, #services header .button.open,
+	#contact-info h3, #contact-info p, #contact-info .info {
+		margin-right: 1.25rem;
+	} */
+	
+	#quick-contact,
+	.title, .sup-title, .description,
+	#contact-info .info {
+		margin-right: 1.25rem;
+	}
+	
+	#about .content .title,
+	.content .button.open {
+		margin-left: 0; margin-right: 0;
+	}
+	
+}
+
+@media screen and ( max-width: 960px ) {
+	
+	.header .title, .header .description, .header .button.open {
+		margin-left: 1.25rem; margin-right: 10%;
+	}
+	
+}
+
+@media screen and ( max-width: 840px ) {
+	
+	/* #logo, 
+	#slider .content h4, #slider .content h3, #slider .content p, #slider .content .button.open,
+	#about header h2, #about header p, #about header .button.open {
+		margin-right: 10%;
+	} */
+	
+	header .logo, 
+	.title, .sup-title, .description, header .button.open/* ,
+	#about header h2, #about header p, #about header .button.open */ {
+		margin-right: 10%;
+	}
+	
+}
+
+@media screen and ( max-width: 640px ) {
+	
+	header .logo, #quick-contact,
+	.title, .sup-title, .description, .button.open,
+	#slider .sup-title, #slider .title, #slider .description, #slider .button.open
+	/* #slider .content h4, #slider .content h3, #slider .content p, #slider .content .button.open,
+	#about header h2, #about header p, #about header .button.open */ {
+		margin-right: 1.25rem;
+	}
+	
+	body {
+		line-height: 1.4;
+	}
+
+	/* Gives heading, paragraph and button smaller font size */	
+	.title, #slider .title
+	/* #slider h3,
+	#about h2,
+	.service-group header h3, .service-group main h4,
+	#contact-info h3 */ {
+	//	font-size: 1.6rem;
+	}
+	
+	#contact-info dd {
+		font-size: 1.45rem;
+	}
+
+	/* Decreases heading, paragraph and button vertical distance */
+	#slider h3, #slider p,
+	#about header h2, #about header p,
+	#contact-info h3, #contact-info p {
+		margin-bottom: 2rem;
+	}
+	
+	body > header {
+		margin-top: 20px;
+	}
+	
+	#slider .content li {
+		padding-top: calc( 20px + 50px + 6.8rem ); padding-bottom: 3.4rem;
+	}
+	
+	
+}
+
+@media screen and ( max-width: 520px ) {
+	
+	/* Decreases heading, paragraph and button vertical distance */
+	#slider h3, #slider p,
+	#about header h2, #about header p,
+	.service-group header h3, .service-group header p,
+	#contact-info h3, #contact-info p {
+		margin-bottom: 1.6rem;
+	}
+	
+	.title
+	/* #slider h3,
+	#about h2,
+	.service-group header h3, .service-group main h4,
+	#contact-info h3 */ {
+		font-size: 1.4rem;
+	}
+	
+	#slider .title {
+		font-size: 1.5rem;
+	}
+	
+	#contact-info dd {
+		font-size: 1.25rem;
+	}
+	
+}
+
+@media screen and ( max-width: 440px ) {
+	
+	/* #slider h3,
+	#about h2,
+	.service-group header h3, .service-group main h4,
+	#contact-info h3 */
+	.title {
+		font-size: 1.25rem;
+	}
+	
+	#contact-info dd {
+		font-size: 1.1rem;
+	}
+	
+	/* Quick contact is positioned at the center */
+	#quick-contact .email {
+		display: none;
+	}
+	
+}
+
+@media screen and ( max-width: 320px ) {
+	
+	/* #slider h3,
+	#about h2,
+	.service-group header h3, .service-group main h4,
+	#contact-info h3 */
+	.title {
+		font-size: 1.2rem;
+	}
+	
+	#slider h4 {
+		font-size: 0.85rem;
+	}
+	
+}
+
+/**
+ * About and services specific
+ */
+
+/* @media screen and ( max-width: 1000px ) {
+	
+	#about header h2, #about header p, #about header .button.open, #about main > .button.close,
+	#services header h3, #services header p, #services header .button.open {
+		margin-left: 1.25rem; margin-right: 1.25rem;
+	}
+	
+	#about article {
+		margin-left: 1.25rem; margin-right: 1.25rem;
+	}
+	
+	#about main > .button.close {
+		left: 0;
+	}
+	
+	#services main h3, #services main > p {
+		margin-right: 1.25rem;
+	}
+
+}
+
+@media screen and ( max-width: 640px ) {
+	
+	#about article {
+		margin-left: 1.25rem; margin-right: 1.25rem;
+	}
+	
+	#services .content li:nth-child( n ) {
+		float: none;
+		width: auto;
+		margin-left: -1.25rem; margin-right: -1.25rem;
+	}
+	
+}
+
+@media screen and ( max-width: 520px ) {
+	
+	#slider h3,
+	#about header h2,  #about main h3,
+	#services .service-group header h3, #services .service-group main h3,
+	#contact-info h3 {
+		font-size: 1.4rem;
+	}
+	
+}
+
+@media screen and ( max-width: 420px ) {
+	
+	#slider h3,
+	#about header h2, #about main h3,
+	#services .service-group header h3, #services .service-group main h3,
+	#contact-info h3 {
+		font-size: 1.25rem;
+	}
+	
+}
+
+@media screen and ( max-width: 320px ) {
+	
+	#slider h3,
+	#about header h2,  #about main h3,
+	#services .service-group header h3, #services .service-group main h4,
+	#contact-info h3 {
+	//	font-size: 1.2rem;
+	}
+	
+} */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,105 @@
+/*-----------------------------------------------------------------*/
+/*	LAYOUT
+/*-----------------------------------------------------------------*/
+
+/**
+ * Random access nav is horizontally aligned
+ * and centered horizontally and vertically within the controls section
+ */
+
+#contact-info .random-access li {
+	float: left;
+}
+
+#contact-info .random-access button {
+	width: 40px; height: 40px;
+}
+
+#contact-info .random-access li:not( :last-child ) button {
+	margin-right: 10px;
+}
+
+#contact-info .random-access button:before {
+	display: flex; align-items: center; justify-content: center;
+}
+
+#contact-info .random-access button:after {
+	box-sizing: border-box;
+	border: 1px solid;
+}
+
+/* Clearing floats */
+#contact-info .random-access:after {
+	display: block;
+	content: "";
+	clear: both;
+}
+
+
+/*-----------------------------------------------------------------*/
+/*	TYPOGRAPHY
+/*-----------------------------------------------------------------*/
+
+/**
+ * Inserting Font-Awesome icons
+ */
+#contact-info .random-access button:before {
+	font-family: "Font Awesome";
+	font-size: 1.25rem;
+}
+
+#contact-info .random-access .address button:before {
+	content: "\f041";
+}
+
+#contact-info .random-access .phone button:before {
+	content: "\f095";
+}
+
+#contact-info .random-access .email button:before {
+	font-size: 1.1rem;
+	content: "\f0e0";
+}
+
+
+/*-----------------------------------------------------------------*/
+/*	COLOR
+/*-----------------------------------------------------------------*/
+
+#contact-info .random-access button {
+//	background-color: transparent;
+//	color: rgba( 255, 255, 255, 1 );
+	color: inherit;
+}
+
+
+/*-----------------------------------------------------------------*/
+/*	IMAGERY
+/*-----------------------------------------------------------------*/
+
+
+/*-----------------------------------------------------------------*/
+/*	USER INTERACTIONS
+/*-----------------------------------------------------------------*/
+
+
+/*-----------------------------------------------------------------*/
+/*	MEDIA QUERIES
+/*-----------------------------------------------------------------*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

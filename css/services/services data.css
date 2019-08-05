@@ -1,0 +1,277 @@
+#services main {
+	display: flex; flex-direction: column;
+	padding-top: 8px; padding-bottom: 8px; padding-left: 1.25rem; padding-right: 1.25rem;
+}
+
+#services .service-group main h3, #services .service-group main > p, #services main .controls {
+	margin-bottom: 1.25rem; margin-right: 25%;
+}
+
+#services .service-group main h3 {
+	display: block;
+	order: 2;
+}
+
+#services .service-group main > p {
+	order: 3;
+}
+
+#services main .controls {
+	order: 1;
+	margin-top: 1.25rem;
+}
+
+#services .controls .button.close {
+	float: left;
+	position: relative;
+}
+
+#services main .content {
+	order: 4;
+}
+
+/* #services .controls .button.close {
+	width: 100%; height: 100%;
+	border: 0; border-radius: 0;
+	color: rgba( 255, 255, 255, 1 );
+	line-height: 225px;
+	text-indent: 0;
+	text-align: center;
+}
+
+#services .controls .button.close:before {
+	display: none;
+}
+
+#services .controls .button.close:after {
+	transform: scale( 1 );
+	z-index: -1;
+}
+
+#services .controls .button.close:hover {
+	color: rgba( 80, 80, 0, 1 );
+}
+
+#services .controls .button.close:hover:after {
+	transform: scale( 0.0005 );
+} */
+
+#services main .content li {
+	float: left;
+	box-sizing: border-box;
+//	width: calc( ( 100% - 8px ) / 2 ); // height: 225px; // height: 250px;
+//	margin-right: 8px; // margin-top: 8px; margin-top: 16px;
+//	background-color: rgba( 255, 255, 0, 0.05 );
+//	background-color: rgba( 80, 80, 0, 0.25 );
+//	border: 1px solid; border-color: rgba( 80, 80, 0, 0.15 );
+//	text-align: center;
+//	background-color: rgba( 80, 80, 0, 1 );
+//	color: rgba( 255, 255, 255, 1 );
+}
+
+/* #services main .content li:hover {
+	background-color: rgba( 80, 80, 0, 1 );
+	color: rgba( 255, 255, 255, 1 );
+} */
+
+/* #services main .content li:nth-child( 2n ) {
+	margin-right: 0;
+}
+
+#services main .content li:nth-child( -n + 2 ) {
+	margin-top: 0;
+} */
+
+/* #services main .content .service-name, */ /* #services main .content .price, */ #services main .notice {
+	margin-left: 1.5rem; margin-right: 1.5rem;
+}
+
+#services main .content .service-name {
+//	height: 4.5rem; height: 2.5rem;
+	margin-bottom: 0; // margin-left: 1.5rem; // margin-right: 2.5rem;
+	padding: 1em; // padding-top: 0; // padding-left: 1.5rem;
+//	border: 1px solid rgba( 80, 80, 0, 0.45 ); // border-width: 1px 0; // border-left-width: 12px;
+//	background-color: rgba( 255, 255, 255, 1 );
+//	color: rgba( 80, 80, 0, 0.75 );
+	background-color: rgba( 80, 80, 0, 0.75 );
+	color: rgba( 255, 255, 255, 1 );
+	font-family: "Arial Black";
+	font-size: 0.7rem;
+//	font-weight: bold;
+	line-height: 1.25;
+//	letter-spacing: -1px;
+	text-transform: uppercase;
+	text-shadow: 0 0 1px rgba( 255, 255, 255, 1 );
+}
+
+/* #services main .content li:hover .service-name {
+	border-width: 1px 0; border-color: rgba( 255, 255, 255, 1 );
+} */
+
+/* #services main .content .price {
+	margin-top: 2.5rem; margin-bottom: 1.25rem;
+	position: relative;
+//	background-color: #999;
+//	font-size: 4rem;
+}
+
+#services main .content dt {
+	display: none;
+}
+
+#services main .content dd {
+	display: inline-block;
+	font-family: "Arial Black";
+	line-height: 1;
+} */
+
+#services main .price {
+//	float: left;
+//	display: inline-block;
+	padding: 2.5rem;
+//	margin-top: 2.5rem; // margin-bottom: 0.75rem;
+//	background-color: rgba( 80, 80, 0, 0.75 );
+//	color: rgba( 255, 255, 255, 1 );
+//	background-color: rgba( 255, 255, 255, 1 );
+	border: 1px solid rgba( 80, 80, 0, 0.25 ); border-bottom-width: 0;
+}
+
+#services main .notice-mark {
+	position: absolute;
+}
+
+#services main .price dt {
+	display: none;
+}
+
+#services main .price dd {
+	line-height: 1;
+}
+
+#services main .price .integer-part, #services main .price .fractional-part, #services main .price .units, #services main .price .notice {
+	display: inline-block;
+}
+
+#services main .price .integer-part, #services main .price .fractional-part {
+	font-family: "Arial Black";
+}
+
+#services main .price .integer-part {
+	font-size: 400%;
+}
+
+#services main .price .fractional-part {
+	position: absolute;
+	font-size: 150%;
+}
+
+#services main .content .service-name, #services main .notice {
+//	padding-left: 1.25rem;
+}
+
+#services main .notice {
+//	margin-left: 2rem; margin-top: 0.5rem;
+	margin-bottom: 0;
+}
+
+#services main .notice:before {
+	content: "*";
+}
+
+/* #services main .price .notice:after {
+	content: ")";
+} */
+
+#services main .price .units, #services main .notice {
+	font-family: Arial;
+	font-size: 75%;
+}
+
+#services main .price .units dd:not( :last-child ):after {
+	content: "/";
+}
+
+/* #services main .content dd:nth-of-type( 1 ) {
+	font-size: 400%;
+}
+
+#services main .content dd:nth-of-type( 2 ), #services main .content dd:nth-of-type( 3 ) {
+	margin-left: 0.25rem;
+}
+
+#services main .content dd:nth-of-type( 2 ) {
+	position: absolute;
+	font-size: 150%;
+}
+
+#services main .content dd:nth-of-type( 3 ) {
+	width: 2.5em;
+//	background-color: #999;
+	word-break: break-all;
+	font-family: Arial;
+	font-size: 75%;
+} */
+
+@media screen and ( min-width: 1001px ) {
+	
+	#services main .content li {
+		width: calc( ( 100% - 2 * 16px ) / 3 );
+		margin-right: 16px; // margin-top: 16px;
+	}
+	
+	#services main .content li:nth-child( 3n + 3 ) {
+		margin-right: 0;
+	}
+	
+	#services main .content li:nth-child( -n + 3 ) {
+		margin-top: 0;
+	}
+	
+}
+
+@media screen and ( max-width: 1000px ) {
+	
+	#services .service-group main h3, #services .service-group main > p, #services main .controls {
+		margin-right: 0;
+	}
+	
+	#services main .content li {
+		width: 100%; // margin-top: 16px;
+	}
+	
+	#services main .content li:nth-child( n ) {
+		margin-right: 0;
+	}
+	
+	#services main .content li:nth-child( -n + 1 ) {
+		margin-top: 0;
+	}
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
