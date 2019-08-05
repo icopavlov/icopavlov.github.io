@@ -3,14 +3,12 @@ header .logo, #main-nav .button.open, #quick-contact, #slider .content {
 	text-shadow: 0 0 2px rgba( 0, 0, 0, 0.75 );
 }
 
-#slider .content {
-	background: url( "../images/slider/linkedin.jpg" ) center center / cover;
-//	text-shadow: 0 0 2px rgba( 0, 0, 0, 0.75 );
+#slider {
+	position: relative;
 }
 
-#slider .cover-image:before {
-//	display: none;
-//	opacity: 0.2;
+#slider .slide .cover-image {
+	display: none;
 }
 
 #slider .button.open, #main-nav .button.open {
