@@ -4,13 +4,13 @@ header .logo, #main-nav .button.open, #quick-contact, #slider .content {
 }
 
 #slider .content {
-	background: url( "../images/slider/RWtVaL.jpg" ) center center / cover;
+	background: url( "../images/slider/linkedin.jpg" ) center center / cover;
 //	text-shadow: 0 0 2px rgba( 0, 0, 0, 0.75 );
 }
 
 #slider .cover-image:before {
 //	display: none;
-	opacity: 0.2;
+//	opacity: 0.2;
 }
 
 #slider .button.open, #main-nav .button.open {
