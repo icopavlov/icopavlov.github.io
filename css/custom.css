@@ -1,6 +1,9 @@
 :root {
 	--text-color: rgba( 80, 80, 0, 1 );
 	--background-color: rgba( 255, 255, 0, 0.45 );
+	--background-color: rgba( 226, 215, 115, 1 );
+	
+	--body-side-width: calc( ( 100% - 960px ) / 2 );
 	
 }
 
@@ -8,6 +11,60 @@ header .logo, #main-nav .button.open, #quick-contact, #slider .content {
 	color: rgba( 255, 255, 255, 1 );
 	text-shadow: 0 0 2px rgba( 0, 0, 0, 0.75 );
 }
+
+/* header:before, header .logo {
+	float: left;
+} */
+
+/* header:after {
+	float: right;
+} */
+
+/* header {
+	box-sizing: border-box;
+	padding-left: var( --body-side-width ); padding-right: var( --body-side-width );
+	border: none;
+	background-color: transparent;
+} */
+
+/* header:before, header:after {
+	display: block;
+	width: var( --body-side-width ); height: 3.2rem;
+	content: "";
+} */
+
+/* header .logo {
+	padding-left: 40px;
+}
+
+header .logo a {
+	margin-left: 0.75rem;
+	position: initial;
+	font-size: 0.85rem; 
+	text-transform: uppercase;
+}
+
+#main-nav {
+	display: flex; flex-direction: column; align-items: center; justify-content: center;
+	height: 3.2rem;
+	position: absolute; left: var( --body-side-width );
+//	background-color: rgba( 0, 0, 0, 0.75 );
+}
+
+#main-nav .button.open {
+	position: relative; top: 0; margin-top: 0;
+} */
+
+/* #quick-contact, .quick-contact-items {
+	position: initial;
+}
+
+#quick-contact {
+	float: right;
+//	display: inline-block;
+	max-width: none;
+//	margin-left: auto;
+} */
 
 #slider {
 	position: relative;
@@ -20,6 +77,10 @@ header .logo, #main-nav .button.open, #quick-contact, #slider .content {
 #slider .sup-title {
 	font-size: 0.85rem;
 }
+
+/* #slider .cover-image {
+	opacity: 0.125;
+} */
 
 #slider .slide .cover-image {
 	display: none;
@@ -50,6 +111,7 @@ header .logo, #main-nav .button.open, #quick-contact, #slider .content {
 }
 
 #main-nav .button.open {
+//	border: none;
 	box-shadow: 0 0 1px rgba( 0, 0, 0, 0.75 );
 }
 
@@ -155,7 +217,7 @@ header .logo, #main-nav .button.open, #quick-contact, #slider .content {
 }
 
 .workpiece {
-	margin-bottom: 0.4rem;
+//	margin-bottom: 0.4rem;
 	position: relative;
 	overflow: hidden;
 }
@@ -260,12 +322,13 @@ header .logo, #main-nav .button.open, #quick-contact, #slider .content {
 	background-color: rgba( 255, 255, 0, 0.25 );
 }
 
-.workpieces-array {
+#live-templates .body {
 	display: flex; flex-direction: column; align-items: center; justify-content: center;
-	/* position: relative;
-	z-index: 4; */
-	
 }
+
+/* .workpieces-array {
+	display: flex; flex-direction: column; align-items: center; justify-content: center;
+} */
 
 .workpiece {
 	overflow: visible;
@@ -291,36 +354,48 @@ header .logo, #main-nav .button.open, #quick-contact, #slider .content {
 .button.open.link {
 	padding: 0;
 	position: relative; z-index: 1;
-	border: none; 
+//	border: none; border-width: 10px;
 	overflow: visible;
+	box-shadow: 0 0 5px var( --text-color );
+	transition-property: box-shadow, opacity; transition-duration: 0.2s;
 }
 
 .button.open.link:hover {
 	z-index: 4;
+	box-shadow: 0 0 15px var( --text-color );
 }
 
 .button.open.link:hover:before {
-	transform: scale( 1.25 );
+	transform: scale( 1.2 );
 	opacity: 0;
 }
 
-.button.open.link:before {
+/* .button.open.link:before {
 	box-sizing: border-box;
 	display: block;
 	width: 100%; height: 100%;
 	position: absolute; left: 0; top: 0;
 //	background-color: rgba( 255, 255, 0, 1 );
-	border: 10px solid;  border-color: var( --text-color );	
+	border: 10px solid; border-color: var( --text-color ); // border-color: var( --background-color );	
 	content: "";
 	transform: scale( 1 );
-	transition-property: transform, opacity; transition-duration: 0.25s;
-}
+	transition-property: transform, opacity; transition-duration: 0.25s, 0.4s;
+} */
 
 .button.open.link:after {
+	display: none;
 	width: 100%; padding-top: 100%; margin: 0; left: 0; top: 0;
-//	background-color: rgba( 255, 255, 0, 1 );
+//	background-color: rgba( 255, 255, 0, 1 ); // background-color: var( --background-color );
 //	opacity: 0.4;	
 }
+
+.button.open.link:hover:after {
+//	transform: scale( 0 );
+}
+
+/* .button.open.link:hover {
+	box-shadow: 0 0 25px var( --text-color );
+} */
 
 .button.open.link {
 	width: 10rem; height: 10rem;
@@ -329,6 +404,14 @@ header .logo, #main-nav .button.open, #quick-contact, #slider .content {
 /* .button.open.link:after {
 	display: none;
 } */
+
+.workpieces-array:hover .button.link {
+	opacity: 0.25;
+}
+
+.workpieces-array:hover .button.link:hover {
+	opacity: 1;
+}
 
 
 
