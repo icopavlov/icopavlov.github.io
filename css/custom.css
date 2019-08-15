@@ -342,8 +342,8 @@ header .logo a {
 	display: none;
 }
 
-.button.open.link, .button.open.link:before, .button.open.link .cover-image {
-	border-radius: 50%;
+.button.open.link, .button.open.link:before /* , .button.open.link .cover-image */ {
+//	border-radius: 50%; border-radius: 1.25rem;
 }
 
 .button.open.link .cover-image {
@@ -398,7 +398,9 @@ header .logo a {
 } */
 
 .button.open.link {
-	width: 10rem; height: 10rem;
+	width: 18rem; height: 10rem;
+	margin-bottom: 1.25rem;
+	overflow: hidden;
 }
 
 /* .button.open.link:after {
@@ -411,6 +413,10 @@ header .logo a {
 
 .workpieces-array:hover .button.link:hover {
 	opacity: 1;
+}
+
+.workpieces-array .cover-image {
+	background-position: center top;
 }
 
 
