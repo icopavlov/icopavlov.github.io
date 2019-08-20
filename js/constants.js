@@ -17,15 +17,13 @@ const CURRENT_ITEM_CLASS = "current",
 
 const sliderSlideOptions = {
 	adaptiveHeight: true,
-//	fade: true,
+	fade: true, 
 	arrows: false,
-//	dots: true,
-//	appendDots: $( "#slider .controls" ),
-//	dotsClass: "random-access",
+	dots: false,
 	touchThreshold: 20,
 	autoplay: true,
 	autoplaySpeed: 6000,
-	infinite: false
+	infinite: true
 };
 
 
@@ -61,10 +59,7 @@ const servicesContentOptions = {
 
 const contactInfoSlideOptions = {
 	arrows: false,
-//	dots: true,
-//	appendDots: $( "#contact-info .controls" ),
 	dotsClass: "random-access",
-	autoplay: true,
 	autoplaySpeed: 6000,
 	pauseOnFocus: true,
 	pauseOnHover: true,
