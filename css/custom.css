@@ -83,7 +83,7 @@ header .logo a {
 } */
 
 #slider .slide .cover-image {
-	display: none;
+//	display: none;
 }
 
 #slider .button.open, #main-nav .button.open {
@@ -342,7 +342,7 @@ header .logo a {
 	display: none;
 }
 
-.button.open.link, .button.open.link:before /* , .button.open.link .cover-image */ {
+.button.open.link, .button.open.link:before, .button.open.link:after /* , .button.open.link .cover-image */ {
 //	border-radius: 50%; border-radius: 1.25rem;
 }
 
@@ -352,9 +352,10 @@ header .logo a {
 }
 
 .button.open.link {
-	padding: 0;
+	display: block; 
+	padding: 0; 
 	position: relative; z-index: 1;
-//	border: none; border-width: 10px;
+//	border: none; border-width: 10px; // border-color: transparent; 
 	overflow: visible;
 	box-shadow: 0 0 5px var( --text-color );
 	transition-property: box-shadow, opacity; transition-duration: 0.2s;
@@ -383,10 +384,13 @@ header .logo a {
 } */
 
 .button.open.link:after {
+	box-sizing: border-box; 
 	display: none;
-	width: 100%; padding-top: 100%; margin: 0; left: 0; top: 0;
-//	background-color: rgba( 255, 255, 0, 1 ); // background-color: var( --background-color );
-//	opacity: 0.4;	
+	width: 100%; height: 100%; padding-top: 0; margin: 0; left: 0; top: 0;
+//	background-color: rgba( 255, 255, 0, 1 ); background-color: transparent; 
+	border-style: solid; border-width: 10px; // border-radius: 0; 
+	transform: none; 
+	opacity: 1;	
 }
 
 .button.open.link:hover:after {
