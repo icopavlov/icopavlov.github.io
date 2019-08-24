@@ -1,4 +1,3 @@
-
 /*-----------------------------------------------------------------*/
 /*	General
 /*-----------------------------------------------------------------*/
@@ -9,6 +8,16 @@ function attachSliderFunctionallityTo( section, options ) {
 	} catch {
 		$( section ).slick( options !== undefined ? options : {} );
 	}
+}
+
+function getSlidePos( slider, slide ) {
+	let slides = $( slider ).find( "li" );
+	for ( let pos = 0; pos < slides.length; pos++ ) {
+		if ( slide.is( slides[ pos ] ) ) {
+			return pos;
+		}
+	}
+	return -1;
 }
 
 function isOpen( section ) {
@@ -104,13 +113,32 @@ function toggleNavBasedOn( minPageOffset, wasNavOpen, nav ) {
 
 function transitionContent( slider ) {
 	let prevSlide = slider.find( "." + CURRENT_ITEM_CLASS ), 
+		nextSlide = getCurrentSlide( slider ),
+		prevSlidePos = getSlidePos( slider, prevSlide ), 
+		nextSlidePos = getSlidePos( slider, nextSlide );
+	if ( nextSlide.is( prevSlide ) ) {
+		return;
+	}
+	prevSlide.removeClass( CURRENT_ITEM_CLASS );
+	nextSlide.addClass( CURRENT_ITEM_CLASS );
+	
+	if ( prevSlidePos < nextSlidePos ) {
+		nextSlide.addClass( SLIDE_BACKGROUND_LEFT_CLASS );
+	} else {
+		nextSlide.addClass( SLIDE_BACKGROUND_RIGHT_CLASS );
+	}
+	prevSlide.removeClass( SLIDE_BACKGROUND_LEFT_CLASS + " " + SLIDE_BACKGROUND_RIGHT_CLASS );
+}
+
+/* function transitionContent( slider ) {
+	let prevSlide = slider.find( "." + CURRENT_ITEM_CLASS ), 
 		nextSlide = getCurrentSlide( slider );
 	if ( nextSlide.is( prevSlide ) ) {
 		return;
 	}
 	prevSlide.removeClass( CURRENT_ITEM_CLASS );
 	nextSlide.addClass( CURRENT_ITEM_CLASS );
-}
+} */
 
 /**
  * Custom function to get the slide the slider is set on at the moment
