@@ -1,0 +1,260 @@
+#slider {
+	--background-animation-duration: 6s;
+	--background-scale-start-value: 1.35;
+	--background-scale-end-value: 1.25;
+	--background-rotate-start-value: 2deg;
+	--background-rotate-end-value: calc( -1 * var( --background-rotate-start-value ) );
+	
+	--background-scale-start: scale( var( --background-scale-start-value ) );
+	--background-scale-end: scale( var( --background-scale-end-value ) );
+	--background-rotate-start: rotateZ( var( --background-rotate-start-value ) );
+	--background-rotate-end: rotateZ( var( --background-rotate-end-value ) );
+	--background-transform-start: var( --background-scale-start ) var( --background-rotate-start );
+	--background-transform-end: var( --background-scale-end ) var( --background-rotate-end );
+	
+	
+	
+	
+	--text-animation-duration: 6s;
+	
+	--text-scale-start-value: 1.5;
+	--text-scale-transitional-value: 1.2;
+	--text-scale-end-value: 1;
+	
+	--text-rotate-start-value: var( --background-rotate-start-value );
+	--text-rotate-transitional-value: 0deg;
+	--text-rotate-end-value: var( --background-rotate-end-value );
+	
+	--text-opacity-start-value: 0;
+	--text-opacity-end-value: 1;
+	
+	--text-scale-start: scale( var( --text-scale-start-value ) );
+	--text-scale-transitional: scale( var( --text-scale-transitional-value ) );
+	--text-scale-end: scale( var( --text-scale-end-value ) );
+	--text-rotate-start: rotateZ( var( --text-rotate-start-value ) );
+	--text-rotate-transitional: rotateZ( var( --text-rotate-transitional-value ) );
+	--text-rotate-end: rotateZ( var( --text-rotate-end-value ) );
+	--text-transform-start: var( --text-scale-start ) var( --text-rotate-start );
+	--text-transform-transitional: var( --text-scale-transitional ) var( --text-rotate-transitional );
+	--text-transform-end: var( --text-scale-end ) var( --text-rotate-end );
+	
+	
+}
+
+/** 
+ * On new slide loading the text lines and the button
+ * enter into view sequentially upwards
+ */
+ 
+#slider .slide {
+	overflow: hidden;
+	
+}
+
+#slider .sup-title, #slider .title, #slider p, #slider .button, #slider .cover-image {
+	transform-origin: 4% center;
+	animation-fill-mode: forwards;
+	animation-timing-function: linear;
+}
+
+#slider .sup-title, #slider .title, #slider p, #slider .button {
+	transform-origin: 45% center;
+	transform: var( --text-scale-start ) var( --text-rotate-start );
+	opacity: var( --text-opacity-start-value );
+}
+
+#slider .sup-title, #slider .title, #slider p, #slider .button {
+	animation-duration: var( --text-animation-duration );
+}
+
+#slider .slide.current .sup-title, #slider .slide.current .title, #slider .slide.current p, #slider .slide.current .button {
+	animation-name: rotate-upwards-text; animation-duration: 6s; animation-delay: 0s;
+}
+
+
+/* #slider li.current.slide-background-left .sup-title, #slider li.current.slide-background-left .title, #slider li.current.slide-background-left p, #slider li.current.slide-background-left .button {
+	animation-name: slide-into-view-left;
+}
+
+#slider li.current.slide-background-right .sup-title, #slider li.current.slide-background-right .title, #slider li.current.slide-background-right p, #slider li.current.slide-background-right .button {
+	animation-name: slide-into-view-right;
+} */
+
+
+#slider .sup-title {
+//	transform-origin: 4% bottom;
+	animation-delay: 0;
+}
+
+#slider .title {
+//	transform-origin: 4% center;
+	animation-delay: 0.5s;
+}
+
+#slider .button {
+//	transform-origin: 4% top;
+	animation-delay: 1s;
+}
+
+
+#slider .cover-image {
+	transform: var( --background-transform-start );
+}
+
+#slider .cover-image {
+	animation-duration: var( --background-animation-duration );
+}
+
+/* #slider .content li.current.slide-background-left:after, #slider .content li.current.slide-background-right:after {
+	animation-duration: 6s;
+	animation-timing-function: linear;
+	animation-fill-mode: forwards;
+} */
+
+#slider .slide.current .cover-image {
+	animation-name: rotate-upwards-background; 
+}
+
+/* #slider .content .sup-title, #slider .content .title, #slider .content p, #slider .content a {
+	opacity: 0;
+} */
+
+
+/* @keyframes rotate-text {
+	
+	0% {
+		transform: var( --text-scale-end ) var( --text-rotate-transitional );
+	}
+	
+	100% {
+		transform: var( --text-scale-end ) var( --text-rotate-end );
+	}
+	
+}
+
+
+@keyframes rotate-scale-text {
+	
+	0% {
+		transform: var( --text-scale-start ) var( --text-rotate-start );
+	}
+	
+	100% {
+		transform: var( --text-scale-end ) var( --text-rotate-transitional );
+	}
+	
+} */
+
+
+@keyframes rotate-upwards-text {
+	
+	0% {
+		transform: var( --text-rotate-start );
+		opacity: var( --text-opacity-start-value );
+	}
+	
+	10% {
+		opacity: var( --text-opacity-end-value );
+	}
+	
+	50% {
+		transform: var( --text-rotate-transitional );
+	}
+	
+	100% {
+		transform: var( --text-rotate-end );
+		opacity: var( --text-opacity-end-value );
+	}
+	
+}
+
+
+@keyframes rotate-upwards-background {
+	
+	0% {
+		transform: var( --background-transform-start );
+	}
+	
+	100% {
+		transform: var( --background-transform-end );
+	}
+	
+}
+
+
+/* @keyframes slide-into-view-left {
+	
+	0% {
+		transform: translateX( 25px );
+		opacity: 0;
+	}
+	
+	20% {
+		opacity: 1;
+	}
+	
+	100% {
+		transform: translateX( 0 );
+		opacity: 1;
+	}
+	
+}
+
+@keyframes slide-into-view-right {
+	
+	0% {
+		transform: translateX( -25px );
+		opacity: 0;
+	}
+	
+	20% {
+		opacity: 1;
+	}
+	
+	100% {
+		transform: translateX( 0 );
+		opacity: 1;
+	}
+	
+}
+
+@keyframes slide-background-left {
+	
+	0% {
+		transform: var( --start-transform-background );
+	}
+	
+	100% {
+		transform: var( --end-left-transform-background );
+	}
+	
+}
+
+@keyframes slide-background-right {
+	
+	0% {
+		transform: var( --start-transform-background );
+	}
+	
+	100% {
+		transform: var( --end-right-transform-background );
+	}
+	
+} */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
