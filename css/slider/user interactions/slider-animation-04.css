@@ -21,9 +21,9 @@
 	--text-scale-transitional-value: 1.2;
 	--text-scale-end-value: 1;
 	
-	--text-rotate-start-value: 3deg;
+	--text-rotate-start-value: 2deg;
 	--text-rotate-transitional-value: 0deg;
-	--text-rotate-end-value: -3deg;
+	--text-rotate-end-value: -2deg;
 	
 	--text-opacity-start-value: 0;
 	--text-opacity-end-value: 1;
@@ -59,7 +59,8 @@
 
 #slider .sup-title, #slider .title, #slider p, #slider .button {
 	transform-origin: 25% center;
-	transform: var( --text-scale-start ) var( --text-rotate-start );
+//	transform: var( --text-scale-start ) var( --text-rotate-start );
+	transform: translateY( 150px ) rotateZ( 10deg );
 	opacity: var( --text-opacity-start-value );
 	animation-timing-function: ease-out;
 }
@@ -90,6 +91,7 @@
 
 #slider .cover-image {
 	transform: var( --background-transform-start );
+	transform: scale( 1.75 ) rotateZ( 10deg );
 }
 
 #slider .cover-image {
@@ -109,7 +111,7 @@
 @keyframes rotate-upwards-text {
 	
 	0% {
-		transform: translateY( 100px ) rotateZ( 4deg );
+		transform: translateY( 150px ) rotateZ( 8deg );
 		opacity: var( --text-opacity-start-value );
 	}
 	
@@ -139,11 +141,11 @@
 	}
 	
 	6% {
-		transform: scale( 1.25 ) rotateZ( 2deg );
+		transform: scale( 1.35 ) rotateZ( 2deg );
 	}
 	
 	100% {
-		transform: scale( 1.2 ) rotateZ( -2deg );
+		transform: scale( 1.25 ) rotateZ( -2deg );
 	}
 	
 }
