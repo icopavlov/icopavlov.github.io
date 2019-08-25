@@ -1,0 +1,169 @@
+#slider {
+	--background-animation-duration: 6s;
+	--background-scale-start-value: 1.35;
+	--background-scale-end-value: 1.25;
+	--background-rotate-start-value: 2deg;
+	--background-rotate-end-value: calc( -1 * var( --background-rotate-start-value ) );
+	
+	--background-scale-start: scale( var( --background-scale-start-value ) );
+	--background-scale-end: scale( var( --background-scale-end-value ) );
+	--background-rotate-start: rotateZ( var( --background-rotate-start-value ) );
+	--background-rotate-end: rotateZ( var( --background-rotate-end-value ) );
+	--background-transform-start: var( --background-scale-start ) var( --background-rotate-start );
+	--background-transform-end: var( --background-scale-end ) var( --background-rotate-end );
+	
+	
+	
+	
+	--text-animation-duration: 6s;
+	
+	--text-scale-start-value: 0.75;
+	--text-scale-transitional-value: 1.2;
+	--text-scale-end-value: 1;
+	
+	--text-rotate-start-value: 3deg;
+	--text-rotate-transitional-value: 0deg;
+	--text-rotate-end-value: -3deg;
+	
+	--text-opacity-start-value: 0;
+	--text-opacity-end-value: 1;
+	
+	--text-scale-start: scale( var( --text-scale-start-value ) );
+	--text-scale-transitional: scale( var( --text-scale-transitional-value ) );
+	--text-scale-end: scale( var( --text-scale-end-value ) );
+	--text-rotate-start: rotateZ( var( --text-rotate-start-value ) );
+	--text-rotate-transitional: rotateZ( var( --text-rotate-transitional-value ) );
+	--text-rotate-end: rotateZ( var( --text-rotate-end-value ) );
+	--text-transform-start: var( --text-scale-start ) var( --text-rotate-start );
+	--text-transform-transitional: var( --text-scale-transitional ) var( --text-rotate-transitional );
+	--text-transform-end: var( --text-scale-end ) var( --text-rotate-end );
+	
+	
+}
+
+/** 
+ * On new slide loading the text lines and the button
+ * enter into view sequentially upwards
+ */
+ 
+#slider .slide {
+	overflow: hidden;
+	
+}
+
+#slider .sup-title, #slider .title, #slider p, #slider .button, #slider .cover-image {
+	transform-origin: 4% center;
+	animation-fill-mode: forwards;
+	animation-timing-function: linear;
+}
+
+#slider .sup-title, #slider .title, #slider p, #slider .button {
+	transform-origin: 25% center;
+	transform: var( --text-scale-start ) var( --text-rotate-start );
+	opacity: var( --text-opacity-start-value );
+	animation-timing-function: ease-out;
+}
+
+#slider .sup-title, #slider .title, #slider p, #slider .button {
+	animation-duration: var( --text-animation-duration );
+}
+
+#slider .slide.current .sup-title, #slider .slide.current .title, #slider .slide.current p, #slider .slide.current .button {
+	animation-name: rotate-upwards-text; animation-duration: 6s; // animation-delay: 0s;
+}
+
+
+
+
+#slider .sup-title {
+	animation-delay: 0.25s;
+}
+
+#slider .title {
+	animation-delay: 0.325s;
+}
+
+#slider .button {
+	animation-delay: 0.4s;
+}
+
+
+#slider .cover-image {
+	transform: var( --background-transform-start );
+}
+
+#slider .cover-image {
+	animation-duration: var( --background-animation-duration );
+}
+
+
+
+
+#slider .slide.current .cover-image {
+	animation-name: rotate-upwards-background; 
+}
+
+
+
+
+@keyframes rotate-upwards-text {
+	
+	0% {
+		transform: translateY( 100px ) rotateZ( 4deg );
+		opacity: var( --text-opacity-start-value );
+	}
+	
+	3% {
+		opacity: var( --text-opacity-end-value );
+	}
+	
+	6% {
+		transform: translateY( 0 ) rotateZ( 2deg );
+		opacity: var( --text-opacity-end-value );
+	}
+	
+	
+	
+	100% {
+		transform: var( --text-rotate-end );
+		opacity: var( --text-opacity-end-value );
+	}
+	
+}
+
+
+@keyframes rotate-upwards-background {
+	
+	0% {
+		transform: scale( 1.75 ) rotateZ( 10deg );
+	}
+	
+	6% {
+		transform: scale( 1.25 ) rotateZ( 2deg );
+	}
+	
+	100% {
+		transform: scale( 1.2 ) rotateZ( -2deg );
+	}
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
